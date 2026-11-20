@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+# generated outputs: keep the real-evidence run and the evaluation summary, regenerate the rest
+out/*
+!out/real/
+eval/*/
+synthetic/
+# Office lock/temp files
+~$*
+*.tmp

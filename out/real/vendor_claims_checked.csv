@@ -1,0 +1,7 @@
+id,claim,verdict,evidence,refs
+E16 §1,Unauthorised requests on 11 and 12 August 2026 only,Contradicted,incident activity runs 09 Aug 03:12 → 06 Sep 01:36 UTC; 118 event(s) outside the claimed window,"E01:req-c28d87e49d, E01:req-ac7784b06, E01:req-237a2dbb88"
+E16 §2,Limited to ticket metadata; no finance records or stored files accessed,Contradicted,"108 API call(s) to DELETE /v2/exports/{id}, GET /v2/exports, GET /v2/exports/{id}/download, GET /v2/payments/scheduled, GET /v2/p; 42 storage read(s) (85 MB)","E01:req-237a2dbb88, E01:req-b2408099c8, E05:bv-80ffa5124a, E05:bv-aaca09c106"
+E16 §3,All temporary export files created during the activity have been removed,Contradicted,"13 export job(s) touched; downloaded and never removed: E02 EXP-5419, LedgerOne 9932",
+E16 §4,No systems inside our environment or on the private link were involved,Contradicted,66 incident request(s) from 10.20.4.77 (tb-build-02),"E01:req-eafb1d40b5, E01:req-c4fd0ea10f, E01:req-a9f6f2b6d3"
+E16 §5,Affected credentials were rotated on 24 August 2026,Contradicted,"5 incident request(s) still accepted after 24 Aug, last 06 Sep 01:36 UTC","E18:req-15a052a5e, E18:req-93d66fcd5, E18:req-33a3928eca"
+E20-A,Our release pipeline is isolated from production,Contradicted,"60 flow(s) from tb-build-02 to production HelpDeskr, LedgerOne, 17 Aug–19 Aug","E15:flw-67f0a99b5c, E15:flw-8992de4cf7, E15:flw-3e784fe01c"

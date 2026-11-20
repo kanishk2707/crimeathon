@@ -1,0 +1,70 @@
+{
+ "_comment": "Facts transcribed by hand from document evidence. Each entry cites its source so it can be checked.",
+ "billed_exports": {
+  "2026-07": 4,
+  "2026-08": 14
+ },
+ "_billed_exports_source": "E06 page 2: July 4 jobs; August 14 used (allowance 5)",
+ "announced_changes": [
+  {
+   "cred": "key-tb-07",
+   "token_regex": "/contact$",
+   "from": "2026-09-01",
+   "source": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  }
+ ],
+ "credential_exposures": [
+  {
+   "credential": "bvk-7f3a",
+   "ticket": "TKT-48213",
+   "source": "E13 support-team chat, 25 Jun 2026 11:31 (s.iyer: 'Their storage access key is in there, bvk-7f3a')"
+  }
+ ],
+ "vendor_claims": [
+  {
+   "id": "E16 §1",
+   "claim": "Unauthorised requests on 11 and 12 August 2026 only",
+   "test": "window",
+   "from": "2026-08-11",
+   "to": "2026-08-12T23:59:59"
+  },
+  {
+   "id": "E16 §2",
+   "claim": "Limited to ticket metadata; no finance records or stored files accessed",
+   "test": "no_access",
+   "patterns": [
+    "vendor",
+    "payment",
+    "bank",
+    "/finance",
+    "export"
+   ]
+  },
+  {
+   "id": "E16 §3",
+   "claim": "All temporary export files created during the activity have been removed",
+   "test": "exports_removed"
+  },
+  {
+   "id": "E16 §4",
+   "claim": "No systems inside our environment or on the private link were involved",
+   "test": "no_link_hosts"
+  },
+  {
+   "id": "E16 §5",
+   "claim": "Affected credentials were rotated on 24 August 2026",
+   "test": "no_use_after",
+   "at": "2026-08-24T23:59:59",
+   "creds": [
+    "key-tb-07",
+    "tb-sync-svc"
+   ]
+  },
+  {
+   "id": "E20-A",
+   "claim": "Our release pipeline is isolated from production",
+   "test": "no_label",
+   "label_regex": "build"
+  }
+ ]
+}

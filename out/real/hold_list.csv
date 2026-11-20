@@ -1,0 +1,6 @@
+vendor_id,vendor_name,verdict,max_score,changes,current,last_known_good,exposed_runs,next_run,action,callback
+V-0412,Coastal Packaging Ltd,HOLD,98,1,bank_account=****9083,bank_account=****4417,,08 Sep 2026,"Hold payment; restore last-known-good; call vendor on number from contract, not from the record",number on file not changed by software
+V-0162,Nila Logistics Supply 162,VERIFY,50,1,bank_account=****9655,,,08 Sep 2026,Call-back verification before the run,use the contract number - record rewritten by key-tb-07 on 05 Sep
+V-0128,Orion Logistics Supply 128,VERIFY,43,1,bank_account=****6077,,,08 Sep 2026,Call-back verification before the run,number on file not changed by software
+V-0233,Southern Fuel Services,VERIFY,40,1,bank_account=****9446,,,08 Sep 2026,Call-back verification before the run,number on file not changed by software
+V-0298,Gemini Logistics Supply 298,VERIFY,35,1,bank_account=****1343,,,08 Sep 2026,Call-back verification before the run,number on file not changed by software

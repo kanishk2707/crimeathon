@@ -1,0 +1,525 @@
+record,source,finding,module,severity,title,thread,record_time_utc,analyst_stage,in_analyst_labels
+E01:req-c28d87e49d,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:12:00,probe_9aug,True
+E01:req-ac7784b06,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:16:00,probe_9aug,True
+E01:req-237a2dbb88,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:20:00,probe_9aug,True
+E01:req-b2408099c8,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:26:00,probe_9aug,True
+E01:req-f7324b62a9,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:32:00,probe_9aug,True
+E01:req-1c4bd03e6b,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:37:00,probe_9aug,True
+E01:req-5a24b86fcc,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:41:00,probe_9aug,True
+E01:req-b7f4b937ed,E01,F002,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-09 03:44:00,probe_9aug,True
+E01:req-c28d87e49d,E01,F003,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-09 03:12:00,probe_9aug,True
+E01:req-ac7784b06,E01,F003,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-09 03:16:00,probe_9aug,True
+E01:req-b2408099c8,E01,F003,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-09 03:26:00,probe_9aug,True
+E01:req-1c4bd03e6b,E01,F003,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-09 03:37:00,probe_9aug,True
+E01:req-b7f4b937ed,E01,F003,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-09 03:44:00,probe_9aug,True
+E01:req-c28d87e49d,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:12:00,probe_9aug,True
+E01:req-ac7784b06,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:16:00,probe_9aug,True
+E01:req-237a2dbb88,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:20:00,probe_9aug,True
+E01:req-b2408099c8,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:26:00,probe_9aug,True
+E01:req-f7324b62a9,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:32:00,probe_9aug,True
+E01:req-1c4bd03e6b,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:37:00,probe_9aug,True
+E01:req-5a24b86fcc,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:41:00,probe_9aug,True
+E01:req-b7f4b937ed,E01,F004,witness,80,Link-only integration identity used off the private link,T1,2026-08-09 03:44:00,probe_9aug,True
+E02:evt-43137d98e2,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:42:00,ticket_secret_search,True
+E02:evt-ec832c0313,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:42:45,ticket_secret_search,True
+E02:evt-521b981f94,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:44:08,ticket_secret_search,True
+E02:evt-cc09774f28,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:45:20,ticket_secret_search,True
+E02:evt-5a57da0be3,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:46:21,ticket_secret_search,True
+E02:evt-4971316f28,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:47:15,ticket_secret_search,True
+E02:evt-99f6292f69,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:48:00,ticket_secret_search,True
+E02:evt-53709abb8d,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:49:02,ticket_secret_search,True
+E02:evt-756e4ad596,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:49:58,ticket_secret_search,True
+E02:evt-a786f0a220,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:50:50,ticket_secret_search,True
+E02:evt-da7d76791e,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:52:02,ticket_secret_search,True
+E02:evt-d44d745825,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:53:20,ticket_secret_search,True
+E02:evt-48775dfb7b,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:54:35,ticket_secret_search,True
+E02:evt-fe4565b1c3,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:55:16,ticket_secret_search,True
+E02:evt-1685223132,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:56:00,ticket_secret_search,True
+E02:evt-908faff869,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:56:51,ticket_secret_search,True
+E02:evt-20d941e9bc,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 17:58:10,ticket_secret_search,True
+E02:evt-d5b7a8536,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:00:10,helpdeskr_export_delete,True
+E02:evt-3d5f15cc5c,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:02:10,helpdeskr_export_delete,True
+E02:evt-a0c8645bc,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:04:10,helpdeskr_export_delete,True
+E02:evt-b1e19b5a38,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:16:10,helpdeskr_export_delete,True
+E02:evt-cbff64561c,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:18:10,helpdeskr_export_delete,True
+E02:evt-b439b5541e,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:20:10,helpdeskr_export_delete,True
+E02:evt-b4fedf5892,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:29:10,helpdeskr_export_delete,True
+E02:evt-d5cff151d,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:31:10,helpdeskr_export_delete,True
+E02:evt-dad568a984,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:33:10,helpdeskr_export_delete,True
+E02:evt-71aa5b3f84,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:41:10,helpdeskr_export_delete,True
+E02:evt-7acc5d11fe,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:43:10,helpdeskr_export_delete,True
+E02:evt-850e6dc5e6,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:45:10,helpdeskr_export_delete,True
+E02:evt-8be2311ddb,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:54:10,helpdeskr_export_delete,True
+E02:evt-7a5cd9521f,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:56:10,helpdeskr_export_delete,True
+E02:evt-f60d18a112,E02,F005,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:58:10,helpdeskr_export_delete,True
+E02:evt-43137d98e2,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:42:00,ticket_secret_search,True
+E02:evt-ec832c0313,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:42:45,ticket_secret_search,True
+E02:evt-521b981f94,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:44:08,ticket_secret_search,True
+E02:evt-cc09774f28,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:45:20,ticket_secret_search,True
+E02:evt-5a57da0be3,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:46:21,ticket_secret_search,True
+E02:evt-4971316f28,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:47:15,ticket_secret_search,True
+E02:evt-99f6292f69,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:48:00,ticket_secret_search,True
+E02:evt-53709abb8d,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:49:02,ticket_secret_search,True
+E02:evt-756e4ad596,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:49:58,ticket_secret_search,True
+E02:evt-a786f0a220,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:50:50,ticket_secret_search,True
+E02:evt-da7d76791e,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:52:02,ticket_secret_search,True
+E02:evt-d44d745825,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:53:20,ticket_secret_search,True
+E02:evt-48775dfb7b,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:54:35,ticket_secret_search,True
+E02:evt-fe4565b1c3,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:55:16,ticket_secret_search,True
+E02:evt-1685223132,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:56:00,ticket_secret_search,True
+E02:evt-908faff869,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 17:56:51,ticket_secret_search,True
+E02:evt-d5b7a8536,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:00:10,helpdeskr_export_delete,True
+E02:evt-3d5f15cc5c,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:02:10,helpdeskr_export_delete,True
+E02:evt-a0c8645bc,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:04:10,helpdeskr_export_delete,True
+E02:evt-b1e19b5a38,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:16:10,helpdeskr_export_delete,True
+E02:evt-cbff64561c,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:18:10,helpdeskr_export_delete,True
+E02:evt-b439b5541e,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:20:10,helpdeskr_export_delete,True
+E02:evt-b4fedf5892,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:29:10,helpdeskr_export_delete,True
+E02:evt-d5cff151d,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:31:10,helpdeskr_export_delete,True
+E02:evt-dad568a984,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:33:10,helpdeskr_export_delete,True
+E02:evt-71aa5b3f84,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:41:10,helpdeskr_export_delete,True
+E02:evt-7acc5d11fe,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:43:10,helpdeskr_export_delete,True
+E02:evt-850e6dc5e6,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:45:10,helpdeskr_export_delete,True
+E02:evt-8be2311ddb,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:54:10,helpdeskr_export_delete,True
+E02:evt-7a5cd9521f,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:56:10,helpdeskr_export_delete,True
+E02:evt-f60d18a112,E02,F006,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:58:10,helpdeskr_export_delete,True
+E02:evt-43137d98e2,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:42:00,ticket_secret_search,True
+E02:evt-ec832c0313,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:42:45,ticket_secret_search,True
+E02:evt-521b981f94,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:44:08,ticket_secret_search,True
+E02:evt-cc09774f28,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:45:20,ticket_secret_search,True
+E02:evt-5a57da0be3,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:46:21,ticket_secret_search,True
+E02:evt-4971316f28,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:47:15,ticket_secret_search,True
+E02:evt-99f6292f69,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:48:00,ticket_secret_search,True
+E02:evt-53709abb8d,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:49:02,ticket_secret_search,True
+E02:evt-756e4ad596,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:49:58,ticket_secret_search,True
+E02:evt-a786f0a220,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:50:50,ticket_secret_search,True
+E02:evt-da7d76791e,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:52:02,ticket_secret_search,True
+E02:evt-d44d745825,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:53:20,ticket_secret_search,True
+E02:evt-48775dfb7b,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:54:35,ticket_secret_search,True
+E02:evt-fe4565b1c3,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:55:16,ticket_secret_search,True
+E02:evt-1685223132,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:56:00,ticket_secret_search,True
+E02:evt-908faff869,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:56:51,ticket_secret_search,True
+E02:evt-20d941e9bc,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 17:58:10,ticket_secret_search,True
+E02:evt-d5b7a8536,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:00:10,helpdeskr_export_delete,True
+E02:evt-3d5f15cc5c,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:02:10,helpdeskr_export_delete,True
+E02:evt-a0c8645bc,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:04:10,helpdeskr_export_delete,True
+E02:evt-b1e19b5a38,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:16:10,helpdeskr_export_delete,True
+E02:evt-cbff64561c,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:18:10,helpdeskr_export_delete,True
+E02:evt-b439b5541e,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:20:10,helpdeskr_export_delete,True
+E02:evt-b4fedf5892,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:29:10,helpdeskr_export_delete,True
+E02:evt-d5cff151d,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:31:10,helpdeskr_export_delete,True
+E02:evt-dad568a984,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:33:10,helpdeskr_export_delete,True
+E02:evt-71aa5b3f84,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:41:10,helpdeskr_export_delete,True
+E02:evt-7acc5d11fe,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:43:10,helpdeskr_export_delete,True
+E02:evt-850e6dc5e6,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:45:10,helpdeskr_export_delete,True
+E02:evt-8be2311ddb,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:54:10,helpdeskr_export_delete,True
+E02:evt-7a5cd9521f,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:56:10,helpdeskr_export_delete,True
+E02:evt-f60d18a112,E02,F007,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:58:10,helpdeskr_export_delete,True
+E02:evt-43137d98e2,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:42:00,ticket_secret_search,True
+E02:evt-ec832c0313,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:42:45,ticket_secret_search,True
+E02:evt-521b981f94,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:44:08,ticket_secret_search,True
+E02:evt-cc09774f28,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:45:20,ticket_secret_search,True
+E02:evt-99f6292f69,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:48:00,ticket_secret_search,True
+E02:evt-fe4565b1c3,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:55:16,ticket_secret_search,True
+E02:evt-908faff869,E02,F008,exfil,75,Searching support tickets for secrets,T1,2026-08-11 17:56:51,ticket_secret_search,True
+E02:evt-20d941e9bc,E02,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-11 17:58:10,ticket_secret_search,True
+E05:bv-dccaa92256,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:06:57,bluevault_pivot,True
+E05:bv-80ffa5124a,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:07:57,bluevault_pivot,True
+E05:bv-aaca09c106,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:08:57,bluevault_pivot,True
+E05:bv-50cd0e6713,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:11:57,bluevault_pivot,True
+E05:bv-580f0644ae,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:12:57,bluevault_pivot,True
+E05:bv-edb0081dad,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:16:57,bluevault_pivot,True
+E05:bv-94baddc5d7,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:31:57,bluevault_pivot,True
+E05:bv-96fc4a18f0,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 21:51:57,bluevault_pivot,True
+E05:bv-ca1e315567,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 22:20:57,bluevault_pivot,True
+E05:bv-6134541df5,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 23:11:57,bluevault_pivot,True
+E05:bv-9e7cc10eba,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-14 23:58:57,bluevault_pivot,True
+E05:bv-98ef6d26c3,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 00:10:57,bluevault_pivot,True
+E05:bv-76e77ccbfd,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 00:50:57,bluevault_pivot,True
+E05:bv-31d8d36b60,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 01:20:57,bluevault_pivot,True
+E05:bv-19d55400d6,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 02:31:57,bluevault_pivot,True
+E05:bv-ccaace7709,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 02:56:57,bluevault_pivot,True
+E05:bv-94702d0dd2,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 03:18:57,bluevault_pivot,True
+E05:bv-26085422b4,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 03:53:57,bluevault_pivot,True
+E05:bv-21aa206733,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 04:26:57,bluevault_pivot,True
+E05:bv-c0610448f2,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 05:25:57,bluevault_pivot,True
+E05:bv-4c9d575af3,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 06:10:57,bluevault_pivot,True
+E05:bv-bee22e9df5,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 07:09:57,bluevault_pivot,True
+E05:bv-879f410874,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 07:53:57,bluevault_pivot,True
+E05:bv-f93e7eb68e,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 08:31:57,bluevault_pivot,True
+E05:bv-8e2ef081ee,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 09:22:57,bluevault_pivot,True
+E05:bv-6d253b546f,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 10:50:57,bluevault_pivot,True
+E05:bv-93f28bb8d8,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 11:48:57,bluevault_pivot,True
+E05:bv-bec6f80d63,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 12:23:57,bluevault_pivot,True
+E05:bv-41cd44b90f,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 13:01:57,bluevault_pivot,True
+E05:bv-e6b0b381a,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 13:36:57,bluevault_pivot,True
+E05:bv-302ee1361d,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 14:27:57,bluevault_pivot,True
+E05:bv-932a5c15e4,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 15:29:57,bluevault_pivot,True
+E05:bv-935d110949,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 16:39:57,bluevault_pivot,True
+E05:bv-80c8e70d8e,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 17:42:57,bluevault_pivot,True
+E05:bv-9d9aa1eda8,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 18:04:57,bluevault_pivot,True
+E05:bv-3508224b08,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 18:16:57,bluevault_pivot,True
+E05:bv-bac47148fa,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 18:53:57,bluevault_pivot,True
+E05:bv-d76c70cfc,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 19:53:57,bluevault_pivot,True
+E05:bv-c507839edb,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 20:36:57,bluevault_pivot,True
+E05:bv-7ec9842156,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 21:08:57,bluevault_pivot,True
+E05:bv-49fbfa366d,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-15 22:04:57,bluevault_pivot,True
+E05:bv-bc555c47da,E05,F009,chain,90,"Credential lifted from a ticket, then used from new addresses",T1,2026-08-16 04:43:57,bluevault_pivot,True
+E02:evt-d5b7a8536,E02,F010,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:00:10,helpdeskr_export_delete,True
+E02:evt-3d5f15cc5c,E02,F010,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:02:10,helpdeskr_export_delete,True
+E02:evt-a0c8645bc,E02,F010,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:04:10,helpdeskr_export_delete,True
+E02:evt-c69c1b1b14,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:08:10,helpdeskr_export_delete,True
+E02:evt-622baffbf7,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:10:10,helpdeskr_export_delete,True
+E02:evt-17cad941aa,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:12:10,helpdeskr_export_delete,True
+E02:evt-bdf02ed329,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:24:10,helpdeskr_export_delete,True
+E02:evt-864b5b9d27,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:26:10,helpdeskr_export_delete,True
+E02:evt-a56029a1fb,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:28:10,helpdeskr_export_delete,True
+E02:evt-c83baf719,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:36:10,helpdeskr_export_delete,True
+E02:evt-b1f476d3b7,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:38:10,helpdeskr_export_delete,True
+E02:evt-5f21a41d55,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:40:10,helpdeskr_export_delete,True
+E02:evt-ee631222f4,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:46:10,helpdeskr_export_delete,True
+E02:evt-55a7c3bced,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:48:10,helpdeskr_export_delete,True
+E02:evt-f8038798f,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:50:10,helpdeskr_export_delete,True
+E02:evt-55c165a49e,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 18:59:10,helpdeskr_export_delete,True
+E02:evt-fc0b2d0277,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 19:01:10,helpdeskr_export_delete,True
+E02:evt-3fe76f60c4,E02,F013,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-11 19:03:10,helpdeskr_export_delete,True
+E02:evt-c69c1b1b14,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:08:10,helpdeskr_export_delete,True
+E02:evt-622baffbf7,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:10:10,helpdeskr_export_delete,True
+E02:evt-17cad941aa,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:12:10,helpdeskr_export_delete,True
+E02:evt-bdf02ed329,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:24:10,helpdeskr_export_delete,True
+E02:evt-864b5b9d27,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:26:10,helpdeskr_export_delete,True
+E02:evt-a56029a1fb,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:28:10,helpdeskr_export_delete,True
+E02:evt-c83baf719,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:36:10,helpdeskr_export_delete,True
+E02:evt-b1f476d3b7,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:38:10,helpdeskr_export_delete,True
+E02:evt-5f21a41d55,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:40:10,helpdeskr_export_delete,True
+E02:evt-ee631222f4,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:46:10,helpdeskr_export_delete,True
+E02:evt-55a7c3bced,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:48:10,helpdeskr_export_delete,True
+E02:evt-f8038798f,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:50:10,helpdeskr_export_delete,True
+E02:evt-55c165a49e,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 18:59:10,helpdeskr_export_delete,True
+E02:evt-fc0b2d0277,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 19:01:10,helpdeskr_export_delete,True
+E02:evt-3fe76f60c4,E02,F014,witness,80,Link-only integration identity used off the private link,T1,2026-08-11 19:03:10,helpdeskr_export_delete,True
+E02:evt-c69c1b1b14,E02,F011,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:08:10,helpdeskr_export_delete,True
+E02:evt-622baffbf7,E02,F011,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:10:10,helpdeskr_export_delete,True
+E02:evt-17cad941aa,E02,F011,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:12:10,helpdeskr_export_delete,True
+E02:evt-c69c1b1b14,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:08:10,helpdeskr_export_delete,True
+E02:evt-622baffbf7,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:10:10,helpdeskr_export_delete,True
+E02:evt-17cad941aa,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:12:10,helpdeskr_export_delete,True
+E02:evt-bdf02ed329,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:24:10,helpdeskr_export_delete,True
+E02:evt-864b5b9d27,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:26:10,helpdeskr_export_delete,True
+E02:evt-a56029a1fb,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:28:10,helpdeskr_export_delete,True
+E02:evt-c83baf719,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:36:10,helpdeskr_export_delete,True
+E02:evt-b1f476d3b7,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:38:10,helpdeskr_export_delete,True
+E02:evt-5f21a41d55,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:40:10,helpdeskr_export_delete,True
+E02:evt-ee631222f4,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:46:10,helpdeskr_export_delete,True
+E02:evt-55a7c3bced,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:48:10,helpdeskr_export_delete,True
+E02:evt-f8038798f,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:50:10,helpdeskr_export_delete,True
+E02:evt-55c165a49e,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 18:59:10,helpdeskr_export_delete,True
+E02:evt-fc0b2d0277,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 19:01:10,helpdeskr_export_delete,True
+E02:evt-3fe76f60c4,E02,F012,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-11 19:03:10,helpdeskr_export_delete,True
+E02:evt-b1e19b5a38,E02,F015,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:16:10,helpdeskr_export_delete,True
+E02:evt-cbff64561c,E02,F015,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:18:10,helpdeskr_export_delete,True
+E02:evt-b439b5541e,E02,F015,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:20:10,helpdeskr_export_delete,True
+E02:evt-bdf02ed329,E02,F016,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:24:10,helpdeskr_export_delete,True
+E02:evt-864b5b9d27,E02,F016,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:26:10,helpdeskr_export_delete,True
+E02:evt-a56029a1fb,E02,F016,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:28:10,helpdeskr_export_delete,True
+E02:evt-b4fedf5892,E02,F017,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:29:10,helpdeskr_export_delete,True
+E02:evt-d5cff151d,E02,F017,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:31:10,helpdeskr_export_delete,True
+E02:evt-dad568a984,E02,F017,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:33:10,helpdeskr_export_delete,True
+E02:evt-c83baf719,E02,F018,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:36:10,helpdeskr_export_delete,True
+E02:evt-b1f476d3b7,E02,F018,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:38:10,helpdeskr_export_delete,True
+E02:evt-5f21a41d55,E02,F018,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:40:10,helpdeskr_export_delete,True
+E02:evt-71aa5b3f84,E02,F019,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:41:10,helpdeskr_export_delete,True
+E02:evt-7acc5d11fe,E02,F019,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:43:10,helpdeskr_export_delete,True
+E02:evt-850e6dc5e6,E02,F019,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:45:10,helpdeskr_export_delete,True
+E02:evt-ee631222f4,E02,F020,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:46:10,helpdeskr_export_delete,True
+E02:evt-55a7c3bced,E02,F020,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:48:10,helpdeskr_export_delete,True
+E02:evt-f8038798f,E02,F020,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:50:10,helpdeskr_export_delete,True
+E02:evt-8be2311ddb,E02,F021,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:54:10,helpdeskr_export_delete,True
+E02:evt-7a5cd9521f,E02,F021,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:56:10,helpdeskr_export_delete,True
+E02:evt-f60d18a112,E02,F021,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:58:10,helpdeskr_export_delete,True
+E02:evt-55c165a49e,E02,F022,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 18:59:10,helpdeskr_export_delete,True
+E02:evt-fc0b2d0277,E02,F022,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 19:01:10,helpdeskr_export_delete,True
+E02:evt-3fe76f60c4,E02,F022,exfil,100,HelpDeskr export job outside any routine,T1,2026-08-11 19:03:10,helpdeskr_export_delete,True
+E01:req-c35c2ccaff,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:41:52,ledger_export_12aug,True
+E01:req-d877f18b6c,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:43:52,ledger_export_12aug,True
+E01:req-df5b599c32,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:45:24,ledger_export_12aug,True
+E01:req-e0694c40fd,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:48:06,ledger_export_12aug,True
+E01:req-42cdb975b3,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:50:48,ledger_export_12aug,True
+E01:req-f030bfb8f0,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:53:07,ledger_export_12aug,True
+E01:req-2cb75d3eac,E01,F025,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 04:02:33,ledger_export_12aug,True
+E01:req-c35c2ccaff,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:41:52,ledger_export_12aug,True
+E01:req-d877f18b6c,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:43:52,ledger_export_12aug,True
+E01:req-df5b599c32,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:45:24,ledger_export_12aug,True
+E01:req-e0694c40fd,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:48:06,ledger_export_12aug,True
+E01:req-42cdb975b3,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:50:48,ledger_export_12aug,True
+E01:req-f030bfb8f0,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:53:07,ledger_export_12aug,True
+E01:req-2cb75d3eac,E01,F023,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 04:02:33,ledger_export_12aug,True
+E01:req-c35c2ccaff,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:41:52,ledger_export_12aug,True
+E01:req-d877f18b6c,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:43:52,ledger_export_12aug,True
+E01:req-df5b599c32,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:45:24,ledger_export_12aug,True
+E01:req-e0694c40fd,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:48:06,ledger_export_12aug,True
+E01:req-42cdb975b3,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:50:48,ledger_export_12aug,True
+E01:req-f030bfb8f0,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:53:07,ledger_export_12aug,True
+E01:req-2cb75d3eac,E01,F024,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 04:02:33,ledger_export_12aug,True
+E01:req-f4ac3b2f1b,E01,F028,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:46:59,ledger_export_12aug,True
+E01:req-5dc9c95246,E01,F028,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:49:21,ledger_export_12aug,True
+E01:req-c0b664c425,E01,F028,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:51:48,ledger_export_12aug,True
+E01:req-51b30fba51,E01,F028,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:56:07,ledger_export_12aug,True
+E01:req-507360d11e,E01,F028,witness,80,Link-only integration identity used off the private link,T1,2026-08-12 03:58:07,ledger_export_12aug,True
+E01:req-f4ac3b2f1b,E01,F026,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:46:59,ledger_export_12aug,True
+E01:req-5dc9c95246,E01,F026,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:49:21,ledger_export_12aug,True
+E01:req-c0b664c425,E01,F026,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:51:48,ledger_export_12aug,True
+E01:req-51b30fba51,E01,F026,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:56:07,ledger_export_12aug,True
+E01:req-507360d11e,E01,F026,grammar,100,Session does not parse as the sync's grammar,T1,2026-08-12 03:58:07,ledger_export_12aug,True
+E01:req-f4ac3b2f1b,E01,F027,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:46:59,ledger_export_12aug,True
+E01:req-5dc9c95246,E01,F027,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:49:21,ledger_export_12aug,True
+E01:req-c0b664c425,E01,F027,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:51:48,ledger_export_12aug,True
+E01:req-51b30fba51,E01,F027,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:56:07,ledger_export_12aug,True
+E01:req-507360d11e,E01,F027,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-12 03:58:07,ledger_export_12aug,True
+E05:bv-dccaa92256,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:06:57,bluevault_pivot,True
+E05:bv-80ffa5124a,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:07:57,bluevault_pivot,True
+E05:bv-aaca09c106,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:08:57,bluevault_pivot,True
+E05:bv-50cd0e6713,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:11:57,bluevault_pivot,True
+E05:bv-580f0644ae,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:12:57,bluevault_pivot,True
+E05:bv-edb0081dad,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:16:57,bluevault_pivot,True
+E05:bv-94baddc5d7,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:31:57,bluevault_pivot,True
+E05:bv-96fc4a18f0,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 21:51:57,bluevault_pivot,True
+E05:bv-ca1e315567,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 22:20:57,bluevault_pivot,True
+E05:bv-6134541df5,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 23:11:57,bluevault_pivot,True
+E05:bv-9e7cc10eba,E05,F030,territory,85,Storage key reading outside its territory,T1,2026-08-14 23:58:57,bluevault_pivot,True
+E05:bv-98ef6d26c3,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 00:10:57,bluevault_pivot,True
+E05:bv-76e77ccbfd,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 00:50:57,bluevault_pivot,True
+E05:bv-31d8d36b60,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 01:20:57,bluevault_pivot,True
+E05:bv-1fee8bb8e,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 01:45:57,bluevault_pivot,True
+E05:bv-19d55400d6,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 02:31:57,bluevault_pivot,True
+E05:bv-ccaace7709,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 02:56:57,bluevault_pivot,True
+E05:bv-94702d0dd2,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 03:18:57,bluevault_pivot,True
+E05:bv-26085422b4,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 03:53:57,bluevault_pivot,True
+E05:bv-21aa206733,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 04:26:57,bluevault_pivot,True
+E05:bv-c0610448f2,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 05:25:57,bluevault_pivot,True
+E05:bv-4c9d575af3,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 06:10:57,bluevault_pivot,True
+E05:bv-bee22e9df5,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 07:09:57,bluevault_pivot,True
+E05:bv-879f410874,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 07:53:57,bluevault_pivot,True
+E05:bv-f93e7eb68e,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 08:31:57,bluevault_pivot,True
+E05:bv-8e2ef081ee,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 09:22:57,bluevault_pivot,True
+E05:bv-21c4f5a5d1,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 10:29:57,bluevault_pivot,True
+E05:bv-6d253b546f,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 10:50:57,bluevault_pivot,True
+E05:bv-93f28bb8d8,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 11:48:57,bluevault_pivot,True
+E05:bv-bec6f80d63,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 12:23:57,bluevault_pivot,True
+E05:bv-41cd44b90f,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 13:01:57,bluevault_pivot,True
+E05:bv-e6b0b381a,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 13:36:57,bluevault_pivot,True
+E05:bv-302ee1361d,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 14:27:57,bluevault_pivot,True
+E05:bv-932a5c15e4,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 15:29:57,bluevault_pivot,True
+E05:bv-935d110949,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 16:39:57,bluevault_pivot,True
+E05:bv-80c8e70d8e,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 17:42:57,bluevault_pivot,True
+E05:bv-9d9aa1eda8,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 18:04:57,bluevault_pivot,True
+E05:bv-3508224b08,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 18:16:57,bluevault_pivot,True
+E05:bv-bac47148fa,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 18:53:57,bluevault_pivot,True
+E05:bv-d76c70cfc,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 19:53:57,bluevault_pivot,True
+E05:bv-c507839edb,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 20:36:57,bluevault_pivot,True
+E05:bv-7ec9842156,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 21:08:57,bluevault_pivot,True
+E05:bv-49fbfa366d,E05,F031,territory,85,Storage key reading outside its territory,T1,2026-08-15 22:04:57,bluevault_pivot,True
+E03:sso-74805f5dd1,E03,F032,identity,75,"Password accepted, MFA refused, from a city never used",T1,2026-08-15 16:20:00,admin_password_attempt,True
+E03:sso-5e1305b0b4,E03,F032,identity,75,"Password accepted, MFA refused, from a city never used",T1,2026-08-15 16:22:00,admin_password_attempt,True
+E03:sso-562f41d2b5,E03,F032,identity,75,"Password accepted, MFA refused, from a city never used",T1,2026-08-15 16:24:00,admin_password_attempt,True
+E05:bv-bc555c47da,E05,F033,territory,85,Storage key reading outside its territory,T1,2026-08-16 04:43:57,bluevault_pivot,True
+E01:req-eafb1d40b5,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:10:00,build_host_recon_17_19aug,True
+E01:req-c4fd0ea10f,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:11:30,build_host_recon_17_19aug,True
+E01:req-a9f6f2b6d3,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:13:21,build_host_recon_17_19aug,True
+E01:req-8947dbdf1d,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:15:51,build_host_recon_17_19aug,True
+E01:req-f4f330ea48,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:18:02,build_host_recon_17_19aug,True
+E01:req-71db731ee6,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:19:08,build_host_recon_17_19aug,True
+E01:req-29a6ef5939,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:20:40,build_host_recon_17_19aug,True
+E01:req-2c8ec2156a,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:22:20,build_host_recon_17_19aug,True
+E01:req-2a9dcab03c,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:24:46,build_host_recon_17_19aug,True
+E01:req-f2f7990305,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:27:18,build_host_recon_17_19aug,True
+E01:req-88dcd38a8d,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:28:18,build_host_recon_17_19aug,True
+E01:req-39724f410d,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:29:34,build_host_recon_17_19aug,True
+E01:req-964a81f5aa,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:31:49,build_host_recon_17_19aug,True
+E01:req-544a5e38ac,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:33:36,build_host_recon_17_19aug,True
+E01:req-5eb2005919,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:34:39,build_host_recon_17_19aug,True
+E01:req-99e3c534cd,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:36:54,build_host_recon_17_19aug,True
+E01:req-11f2148945,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:38:41,build_host_recon_17_19aug,True
+E01:req-c82084bd00,E01,F034,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-17 12:40:39,build_host_recon_17_19aug,True
+E01:req-eafb1d40b5,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:10:00,build_host_recon_17_19aug,True
+E01:req-c4fd0ea10f,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:11:30,build_host_recon_17_19aug,True
+E01:req-a9f6f2b6d3,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:13:21,build_host_recon_17_19aug,True
+E01:req-8947dbdf1d,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:15:51,build_host_recon_17_19aug,True
+E01:req-f4f330ea48,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:18:02,build_host_recon_17_19aug,True
+E01:req-71db731ee6,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:19:08,build_host_recon_17_19aug,True
+E01:req-29a6ef5939,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:20:40,build_host_recon_17_19aug,True
+E01:req-2c8ec2156a,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:22:20,build_host_recon_17_19aug,True
+E01:req-2a9dcab03c,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:24:46,build_host_recon_17_19aug,True
+E01:req-f2f7990305,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:27:18,build_host_recon_17_19aug,True
+E01:req-88dcd38a8d,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:28:18,build_host_recon_17_19aug,True
+E01:req-39724f410d,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:29:34,build_host_recon_17_19aug,True
+E01:req-964a81f5aa,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:31:49,build_host_recon_17_19aug,True
+E01:req-544a5e38ac,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:33:36,build_host_recon_17_19aug,True
+E01:req-5eb2005919,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:34:39,build_host_recon_17_19aug,True
+E01:req-99e3c534cd,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:36:54,build_host_recon_17_19aug,True
+E01:req-11f2148945,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:38:41,build_host_recon_17_19aug,True
+E01:req-c82084bd00,E01,F035,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-17 12:40:39,build_host_recon_17_19aug,True
+E01:req-eafb1d40b5,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:10:00,build_host_recon_17_19aug,True
+E01:req-c4fd0ea10f,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:11:30,build_host_recon_17_19aug,True
+E01:req-a9f6f2b6d3,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:13:21,build_host_recon_17_19aug,True
+E01:req-8947dbdf1d,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:15:51,build_host_recon_17_19aug,True
+E01:req-f4f330ea48,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:18:02,build_host_recon_17_19aug,True
+E01:req-71db731ee6,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:19:08,build_host_recon_17_19aug,True
+E01:req-29a6ef5939,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:20:40,build_host_recon_17_19aug,True
+E01:req-2c8ec2156a,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:22:20,build_host_recon_17_19aug,True
+E01:req-2a9dcab03c,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:24:46,build_host_recon_17_19aug,True
+E01:req-f2f7990305,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:27:18,build_host_recon_17_19aug,True
+E01:req-88dcd38a8d,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:28:18,build_host_recon_17_19aug,True
+E01:req-39724f410d,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:29:34,build_host_recon_17_19aug,True
+E01:req-964a81f5aa,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:31:49,build_host_recon_17_19aug,True
+E01:req-544a5e38ac,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:33:36,build_host_recon_17_19aug,True
+E01:req-5eb2005919,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:34:39,build_host_recon_17_19aug,True
+E01:req-99e3c534cd,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:36:54,build_host_recon_17_19aug,True
+E01:req-11f2148945,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:38:41,build_host_recon_17_19aug,True
+E01:req-c82084bd00,E01,F036,witness,78,New host speaking for a link integration,T1,2026-08-17 12:40:39,build_host_recon_17_19aug,True
+E01:req-1a47a2b426,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:10:00,build_host_recon_17_19aug,True
+E01:req-c44772fad2,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:12:35,build_host_recon_17_19aug,True
+E01:req-8ea2fcaa6a,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:13:50,build_host_recon_17_19aug,True
+E01:req-e770429fbd,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:15:11,build_host_recon_17_19aug,True
+E01:req-4e2770c946,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:17:27,build_host_recon_17_19aug,True
+E01:req-86398470ed,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:19:08,build_host_recon_17_19aug,True
+E01:req-f983a08538,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:21:47,build_host_recon_17_19aug,True
+E01:req-3b09b068ea,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:22:56,build_host_recon_17_19aug,True
+E01:req-8a30fb2eef,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:23:59,build_host_recon_17_19aug,True
+E01:req-a2cddffcaa,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:25:35,build_host_recon_17_19aug,True
+E01:req-8cda3b07b9,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:28:15,build_host_recon_17_19aug,True
+E01:req-fab06007b6,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:29:17,build_host_recon_17_19aug,True
+E01:req-4fc25525eb,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:30:23,build_host_recon_17_19aug,True
+E01:req-310345448f,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:33:02,build_host_recon_17_19aug,True
+E01:req-36acdc3803,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:34:59,build_host_recon_17_19aug,True
+E01:req-50f92112a6,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:36:08,build_host_recon_17_19aug,True
+E01:req-dee1a1abbe,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:37:29,build_host_recon_17_19aug,True
+E01:req-e3969e19cb,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:39:33,build_host_recon_17_19aug,True
+E01:req-fe4bd4fe93,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 12:55:00,build_host_recon_17_19aug,True
+E01:req-ab03db20b8,E01,F039,witness,78,New host speaking for a link integration,T1,2026-08-18 13:01:00,build_host_recon_17_19aug,True
+E01:req-1a47a2b426,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:10:00,build_host_recon_17_19aug,True
+E01:req-c44772fad2,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:12:35,build_host_recon_17_19aug,True
+E01:req-8ea2fcaa6a,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:13:50,build_host_recon_17_19aug,True
+E01:req-e770429fbd,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:15:11,build_host_recon_17_19aug,True
+E01:req-4e2770c946,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:17:27,build_host_recon_17_19aug,True
+E01:req-86398470ed,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:19:08,build_host_recon_17_19aug,True
+E01:req-f983a08538,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:21:47,build_host_recon_17_19aug,True
+E01:req-3b09b068ea,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:22:56,build_host_recon_17_19aug,True
+E01:req-8a30fb2eef,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:23:59,build_host_recon_17_19aug,True
+E01:req-a2cddffcaa,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:25:35,build_host_recon_17_19aug,True
+E01:req-8cda3b07b9,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:28:15,build_host_recon_17_19aug,True
+E01:req-fab06007b6,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:29:17,build_host_recon_17_19aug,True
+E01:req-4fc25525eb,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:30:23,build_host_recon_17_19aug,True
+E01:req-310345448f,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:33:02,build_host_recon_17_19aug,True
+E01:req-36acdc3803,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:34:59,build_host_recon_17_19aug,True
+E01:req-50f92112a6,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:36:08,build_host_recon_17_19aug,True
+E01:req-dee1a1abbe,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:37:29,build_host_recon_17_19aug,True
+E01:req-e3969e19cb,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:39:33,build_host_recon_17_19aug,True
+E01:req-fe4bd4fe93,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:55:00,build_host_recon_17_19aug,True
+E01:req-ab03db20b8,E01,F037,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 13:01:00,build_host_recon_17_19aug,True
+E01:req-1a47a2b426,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:10:00,build_host_recon_17_19aug,True
+E01:req-c44772fad2,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:12:35,build_host_recon_17_19aug,True
+E01:req-8ea2fcaa6a,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:13:50,build_host_recon_17_19aug,True
+E01:req-e770429fbd,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:15:11,build_host_recon_17_19aug,True
+E01:req-4e2770c946,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:17:27,build_host_recon_17_19aug,True
+E01:req-86398470ed,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:19:08,build_host_recon_17_19aug,True
+E01:req-f983a08538,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:21:47,build_host_recon_17_19aug,True
+E01:req-3b09b068ea,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:22:56,build_host_recon_17_19aug,True
+E01:req-8a30fb2eef,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:23:59,build_host_recon_17_19aug,True
+E01:req-a2cddffcaa,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:25:35,build_host_recon_17_19aug,True
+E01:req-8cda3b07b9,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:28:15,build_host_recon_17_19aug,True
+E01:req-fab06007b6,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:29:17,build_host_recon_17_19aug,True
+E01:req-4fc25525eb,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:30:23,build_host_recon_17_19aug,True
+E01:req-310345448f,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:33:02,build_host_recon_17_19aug,True
+E01:req-36acdc3803,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:34:59,build_host_recon_17_19aug,True
+E01:req-50f92112a6,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:36:08,build_host_recon_17_19aug,True
+E01:req-dee1a1abbe,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:37:29,build_host_recon_17_19aug,True
+E01:req-e3969e19cb,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:39:33,build_host_recon_17_19aug,True
+E01:req-fe4bd4fe93,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:55:00,build_host_recon_17_19aug,True
+E01:req-ab03db20b8,E01,F038,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 13:01:00,build_host_recon_17_19aug,True
+E02:evt-5c82bfc816,E02,F042,witness,78,New host speaking for a link integration,T1,2026-08-18 12:20:00,build_host_ticket_search,True
+E02:evt-6a62a5df49,E02,F042,witness,78,New host speaking for a link integration,T1,2026-08-18 12:22:00,build_host_ticket_search,True
+E02:evt-6e64a3d77,E02,F042,witness,78,New host speaking for a link integration,T1,2026-08-18 12:24:00,build_host_ticket_search,True
+E02:evt-bf79f5279b,E02,F042,witness,78,New host speaking for a link integration,T1,2026-08-18 12:26:00,build_host_ticket_search,True
+E02:evt-3f3ed80843,E02,F042,witness,78,New host speaking for a link integration,T1,2026-08-18 12:28:00,build_host_ticket_search,True
+E02:evt-5c82bfc816,E02,F040,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:20:00,build_host_ticket_search,True
+E02:evt-6a62a5df49,E02,F040,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:22:00,build_host_ticket_search,True
+E02:evt-6e64a3d77,E02,F040,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:24:00,build_host_ticket_search,True
+E02:evt-bf79f5279b,E02,F040,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:26:00,build_host_ticket_search,True
+E02:evt-3f3ed80843,E02,F040,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-18 12:28:00,build_host_ticket_search,True
+E02:evt-5c82bfc816,E02,F041,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:20:00,build_host_ticket_search,True
+E02:evt-6a62a5df49,E02,F041,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:22:00,build_host_ticket_search,True
+E02:evt-6e64a3d77,E02,F041,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:24:00,build_host_ticket_search,True
+E02:evt-bf79f5279b,E02,F041,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:26:00,build_host_ticket_search,True
+E02:evt-3f3ed80843,E02,F041,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-18 12:28:00,build_host_ticket_search,True
+E01:req-1e745672ca,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:10:00,build_host_recon_17_19aug,True
+E01:req-e11328784c,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:12:27,build_host_recon_17_19aug,True
+E01:req-985e7a55eb,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:14:27,build_host_recon_17_19aug,True
+E01:req-e728c5de76,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:16:56,build_host_recon_17_19aug,True
+E01:req-a9c8fb6dc0,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:18:12,build_host_recon_17_19aug,True
+E01:req-8db0a7c308,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:19:14,build_host_recon_17_19aug,True
+E01:req-62e36691db,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:20:17,build_host_recon_17_19aug,True
+E01:req-be1aedf60f,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:22:47,build_host_recon_17_19aug,True
+E01:req-db897e0754,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:25:21,build_host_recon_17_19aug,True
+E01:req-52e4937e8d,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:27:27,build_host_recon_17_19aug,True
+E01:req-70748f7f4f,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:28:47,build_host_recon_17_19aug,True
+E01:req-539ad9f772,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:30:39,build_host_recon_17_19aug,True
+E01:req-9fe0ff3329,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:32:17,build_host_recon_17_19aug,True
+E01:req-80522d08a5,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:34:23,build_host_recon_17_19aug,True
+E01:req-76695ca776,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:36:15,build_host_recon_17_19aug,True
+E01:req-f263eb7afc,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:38:12,build_host_recon_17_19aug,True
+E01:req-23db42417,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:40:11,build_host_recon_17_19aug,True
+E01:req-d97c30be81,E01,F043,grammar,95,Session does not parse as the sync's grammar,T1,2026-08-19 12:42:04,build_host_recon_17_19aug,True
+E01:req-1e745672ca,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:10:00,build_host_recon_17_19aug,True
+E01:req-e11328784c,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:12:27,build_host_recon_17_19aug,True
+E01:req-985e7a55eb,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:14:27,build_host_recon_17_19aug,True
+E01:req-e728c5de76,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:16:56,build_host_recon_17_19aug,True
+E01:req-a9c8fb6dc0,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:18:12,build_host_recon_17_19aug,True
+E01:req-8db0a7c308,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:19:14,build_host_recon_17_19aug,True
+E01:req-62e36691db,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:20:17,build_host_recon_17_19aug,True
+E01:req-be1aedf60f,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:22:47,build_host_recon_17_19aug,True
+E01:req-db897e0754,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:25:21,build_host_recon_17_19aug,True
+E01:req-52e4937e8d,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:27:27,build_host_recon_17_19aug,True
+E01:req-70748f7f4f,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:28:47,build_host_recon_17_19aug,True
+E01:req-539ad9f772,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:30:39,build_host_recon_17_19aug,True
+E01:req-9fe0ff3329,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:32:17,build_host_recon_17_19aug,True
+E01:req-80522d08a5,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:34:23,build_host_recon_17_19aug,True
+E01:req-76695ca776,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:36:15,build_host_recon_17_19aug,True
+E01:req-f263eb7afc,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:38:12,build_host_recon_17_19aug,True
+E01:req-23db42417,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:40:11,build_host_recon_17_19aug,True
+E01:req-d97c30be81,E01,F044,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-08-19 12:42:04,build_host_recon_17_19aug,True
+E01:req-1e745672ca,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:10:00,build_host_recon_17_19aug,True
+E01:req-e11328784c,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:12:27,build_host_recon_17_19aug,True
+E01:req-985e7a55eb,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:14:27,build_host_recon_17_19aug,True
+E01:req-e728c5de76,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:16:56,build_host_recon_17_19aug,True
+E01:req-a9c8fb6dc0,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:18:12,build_host_recon_17_19aug,True
+E01:req-8db0a7c308,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:19:14,build_host_recon_17_19aug,True
+E01:req-62e36691db,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:20:17,build_host_recon_17_19aug,True
+E01:req-be1aedf60f,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:22:47,build_host_recon_17_19aug,True
+E01:req-db897e0754,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:25:21,build_host_recon_17_19aug,True
+E01:req-52e4937e8d,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:27:27,build_host_recon_17_19aug,True
+E01:req-70748f7f4f,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:28:47,build_host_recon_17_19aug,True
+E01:req-539ad9f772,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:30:39,build_host_recon_17_19aug,True
+E01:req-9fe0ff3329,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:32:17,build_host_recon_17_19aug,True
+E01:req-80522d08a5,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:34:23,build_host_recon_17_19aug,True
+E01:req-76695ca776,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:36:15,build_host_recon_17_19aug,True
+E01:req-f263eb7afc,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:38:12,build_host_recon_17_19aug,True
+E01:req-23db42417,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:40:11,build_host_recon_17_19aug,True
+E01:req-d97c30be81,E01,F045,witness,78,New host speaking for a link integration,T1,2026-08-19 12:42:04,build_host_recon_17_19aug,True
+E18:req-15a052a5e,E18,F063,witness,78,New host speaking for a link integration,T1,2026-09-03 01:41:10,bank_tamper_sep,True
+E18:req-93d66fcd5,E18,F063,witness,78,New host speaking for a link integration,T1,2026-09-03 01:41:50,bank_tamper_sep,True
+E18:req-33a3928eca,E18,F063,witness,78,New host speaking for a link integration,T1,2026-09-03 01:42:45,bank_tamper_sep,True
+E18:req-5f61b0de8,E18,F063,witness,78,New host speaking for a link integration,T1,2026-09-03 01:44:30,bank_tamper_sep,True
+E18:req-15a052a5e,E18,F061,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-09-03 01:41:10,bank_tamper_sep,True
+E18:req-93d66fcd5,E18,F061,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-09-03 01:41:50,bank_tamper_sep,True
+E18:req-33a3928eca,E18,F061,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-09-03 01:42:45,bank_tamper_sep,True
+E18:req-5f61b0de8,E18,F061,ledger,90,Suspense: integration activity with no place in the sync ledger,T1,2026-09-03 01:44:30,bank_tamper_sep,True
+E18:req-15a052a5e,E18,F062,grammar,85,Session does not parse as the sync's grammar,T1,2026-09-03 01:41:10,bank_tamper_sep,True
+E18:req-93d66fcd5,E18,F062,grammar,85,Session does not parse as the sync's grammar,T1,2026-09-03 01:41:50,bank_tamper_sep,True
+E18:req-33a3928eca,E18,F062,grammar,85,Session does not parse as the sync's grammar,T1,2026-09-03 01:42:45,bank_tamper_sep,True
+E18:req-5f61b0de8,E18,F062,grammar,85,Session does not parse as the sync's grammar,T1,2026-09-03 01:44:30,bank_tamper_sep,True
+E19:chg-8b9888c39b,E19,F066,firewall,98,Vendor payment instructions changed without a valid human approval,T1,2026-09-03 01:44:30,bank_tamper_sep,True
+E18:req-5f61b0de8,E18,F066,firewall,98,Vendor payment instructions changed without a valid human approval,T1,2026-09-03 01:44:30,bank_tamper_sep,True
+E18:req-bb819dfe0c,E18,F082,grammar,94,Session does not parse as the sync's grammar,T1,2026-09-06 01:36:05,bank_tamper_sep,True
+E18:req-bb819dfe0c,E18,F081,ledger,99,Suspense: integration activity with no place in the sync ledger,T1,2026-09-06 01:36:05,bank_tamper_sep,True
+E18:req-bb819dfe0c,E18,F083,witness,86,New host speaking for a link integration,T1,2026-09-06 01:36:05,bank_tamper_sep,True

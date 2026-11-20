@@ -1,0 +1,60 @@
+{
+ "learned_until": "2026-07-21 01:52:30",
+ "credentials": [
+  {
+   "credential": "key-tb-07",
+   "system": "LedgerOne",
+   "granted": "read:write all-modules",
+   "needed": [
+    "GET /v2/invoices",
+    "GET /v2/payments/status",
+    "GET /v2/vendors",
+    "POST /v2/invoices"
+   ],
+   "hosts": [
+    "10.20.4.11",
+    "10.20.4.12",
+    "10.20.4.13",
+    "10.20.4.14",
+    "10.20.4.15",
+    "10.20.4.16"
+   ],
+   "window": "01:00\u201302:45 UTC",
+   "attacker_requests": 81,
+   "attacker_refused": 81,
+   "genuine_requests": 1030,
+   "genuine_refused": 70,
+   "genuine_refused_tokens": [
+    "PATCH /v2/vendors/{id}/contact"
+   ],
+   "refused_by_action": 78,
+   "refused_by_host": 81,
+   "refused_by_hour": 76
+  },
+  {
+   "credential": "tb-sync-svc",
+   "system": "HelpDeskr",
+   "granted": "admin",
+   "needed": [
+    "ticket.read"
+   ],
+   "hosts": [
+    "10.20.4.11",
+    "10.20.4.12",
+    "10.20.4.13",
+    "10.20.4.14",
+    "10.20.4.15",
+    "10.20.4.16"
+   ],
+   "window": "00:59\u201302:43 UTC",
+   "attacker_requests": 52,
+   "attacker_refused": 52,
+   "genuine_requests": 615,
+   "genuine_refused": 0,
+   "genuine_refused_tokens": [],
+   "refused_by_action": 51,
+   "refused_by_host": 52,
+   "refused_by_hour": 52
+  }
+ ]
+}

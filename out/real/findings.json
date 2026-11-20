@@ -1,0 +1,2968 @@
+[
+ {
+  "module": "exfil",
+  "category": "governance",
+  "severity": 50,
+  "title": "Invoice and audit log disagree on export jobs",
+  "ts_first": "2026-08-01T00:00:00",
+  "ts_last": "2026-08-31T00:00:00",
+  "entity": "HelpDeskr",
+  "cred": "",
+  "ip": "",
+  "refs": [],
+  "summary": "2026-08: billed 14 export jobs (E06); audit log shows 14, of which 4 match a routine. 10 unexplained.",
+  "details": {
+   "billed": 14,
+   "logged": 14,
+   "routine": 4,
+   "unexplained": 10
+  },
+  "fid": "F001",
+  "days_to_run": 7.1875,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 100,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-09T03:12:00",
+  "ts_last": "2026-08-09T03:44:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E01:req-c28d87e49d",
+   "E01:req-ac7784b06",
+   "E01:req-237a2dbb88",
+   "E01:req-b2408099c8",
+   "E01:req-f7324b62a9",
+   "E01:req-1c4bd03e6b",
+   "E01:req-5a24b86fcc",
+   "E01:req-b7f4b937ed"
+  ],
+  "summary": "8-event session by key-tb-07 from 198.18.7.41 (untrusted): 4 unknown action(s): GET /v2/exports, GET /v2/me, GET /v2/payments/search, GET /v2/schema; 100% of transitions never made by the sync; started 5.7 sd away from the usual sync time; version 3.4.1 after fleet moved to 3.5.0.",
+  "details": {
+   "score": 100,
+   "ua_flags": [
+    "version 3.4.1 after fleet moved to 3.5.0"
+   ]
+  },
+  "fid": "F002",
+  "days_to_run": 14.054166666666667,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-09T03:12:00",
+  "ts_last": "2026-08-09T03:44:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E01:req-c28d87e49d",
+   "E01:req-ac7784b06",
+   "E01:req-b2408099c8",
+   "E01:req-1c4bd03e6b",
+   "E01:req-b7f4b937ed"
+  ],
+  "summary": "5 event(s) by key-tb-07 (untrusted session from 198.18.7.41) use 4 action(s) that witnessed sync sessions never use: GET /v2/exports, GET /v2/me, GET /v2/payments/search, GET /v2/schema. Records touched: 8.",
+  "details": {
+   "tokens": [
+    "GET /v2/exports",
+    "GET /v2/me",
+    "GET /v2/payments/search",
+    "GET /v2/schema"
+   ],
+   "records": 8,
+   "session_trust": "untrusted"
+  },
+  "fid": "F003",
+  "days_to_run": 14.054166666666667,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 80,
+  "title": "Link-only integration identity used off the private link",
+  "ts_first": "2026-08-09T03:12:00",
+  "ts_last": "2026-08-09T03:44:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E01:req-c28d87e49d",
+   "E01:req-ac7784b06",
+   "E01:req-237a2dbb88",
+   "E01:req-b2408099c8",
+   "E01:req-f7324b62a9",
+   "E01:req-1c4bd03e6b",
+   "E01:req-5a24b86fcc",
+   "E01:req-b7f4b937ed"
+  ],
+  "summary": "8 LedgerOne event(s) by key-tb-07 from 198.18.7.41; this identity normally acts only from 10.20.4.0/24 and no E15 flow can witness it.",
+  "details": {
+   "tokens": [
+    "GET /v2/exports",
+    "GET /v2/invoices",
+    "GET /v2/me",
+    "GET /v2/payments/search",
+    "GET /v2/schema",
+    "GET /v2/vendors"
+   ],
+   "user_agents": [
+    "TallyBridge-Sync/3.4.1"
+   ]
+  },
+  "fid": "F004",
+  "days_to_run": 14.054166666666667,
+  "base_severity": 80,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 95,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-11T17:42:00",
+  "ts_last": "2026-08-11T18:58:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-43137d98e2",
+   "E02:evt-ec832c0313",
+   "E02:evt-521b981f94",
+   "E02:evt-cc09774f28",
+   "E02:evt-5a57da0be3",
+   "E02:evt-4971316f28",
+   "E02:evt-99f6292f69",
+   "E02:evt-53709abb8d",
+   "E02:evt-756e4ad596",
+   "E02:evt-a786f0a220",
+   "E02:evt-da7d76791e",
+   "E02:evt-d44d745825",
+   "E02:evt-48775dfb7b",
+   "E02:evt-fe4565b1c3",
+   "E02:evt-1685223132",
+   "E02:evt-908faff869",
+   "E02:evt-20d941e9bc",
+   "E02:evt-d5b7a8536",
+   "E02:evt-3d5f15cc5c",
+   "E02:evt-a0c8645bc",
+   "E02:evt-b1e19b5a38",
+   "E02:evt-cbff64561c",
+   "E02:evt-b439b5541e",
+   "E02:evt-b4fedf5892",
+   "E02:evt-d5cff151d",
+   "E02:evt-dad568a984",
+   "E02:evt-71aa5b3f84",
+   "E02:evt-7acc5d11fe",
+   "E02:evt-850e6dc5e6",
+   "E02:evt-8be2311ddb",
+   "E02:evt-7a5cd9521f",
+   "E02:evt-f60d18a112"
+  ],
+  "summary": "32-event session by tb-sync-svc from 198.18.7.41 (untrusted): 4 unknown action(s): export.create, export.delete, export.download, ticket.search; 100% of transitions never made by the sync; started 31.9 sd away from the usual sync time.",
+  "details": {
+   "score": 95,
+   "ua_flags": []
+  },
+  "fid": "F005",
+  "days_to_run": 11.45,
+  "base_severity": 95,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-11T17:42:00",
+  "ts_last": "2026-08-11T18:58:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-43137d98e2",
+   "E02:evt-ec832c0313",
+   "E02:evt-521b981f94",
+   "E02:evt-cc09774f28",
+   "E02:evt-5a57da0be3",
+   "E02:evt-4971316f28",
+   "E02:evt-99f6292f69",
+   "E02:evt-53709abb8d",
+   "E02:evt-756e4ad596",
+   "E02:evt-a786f0a220",
+   "E02:evt-da7d76791e",
+   "E02:evt-d44d745825",
+   "E02:evt-48775dfb7b",
+   "E02:evt-fe4565b1c3",
+   "E02:evt-1685223132",
+   "E02:evt-908faff869",
+   "E02:evt-d5b7a8536",
+   "E02:evt-3d5f15cc5c",
+   "E02:evt-a0c8645bc",
+   "E02:evt-b1e19b5a38",
+   "E02:evt-cbff64561c",
+   "E02:evt-b439b5541e",
+   "E02:evt-b4fedf5892",
+   "E02:evt-d5cff151d",
+   "E02:evt-dad568a984",
+   "E02:evt-71aa5b3f84",
+   "E02:evt-7acc5d11fe",
+   "E02:evt-850e6dc5e6",
+   "E02:evt-8be2311ddb",
+   "E02:evt-7a5cd9521f",
+   "E02:evt-f60d18a112"
+  ],
+  "summary": "31 event(s) by tb-sync-svc (untrusted session from 198.18.7.41) use 4 action(s) that witnessed sync sessions never use: export.create, export.delete, export.download, ticket.search. Records touched: 31.",
+  "details": {
+   "tokens": [
+    "export.create",
+    "export.delete",
+    "export.download",
+    "ticket.search"
+   ],
+   "records": 31,
+   "session_trust": "untrusted"
+  },
+  "fid": "F006",
+  "days_to_run": 11.45,
+  "base_severity": 90,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 80,
+  "title": "Link-only integration identity used off the private link",
+  "ts_first": "2026-08-11T17:42:00",
+  "ts_last": "2026-08-11T18:58:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-43137d98e2",
+   "E02:evt-ec832c0313",
+   "E02:evt-521b981f94",
+   "E02:evt-cc09774f28",
+   "E02:evt-5a57da0be3",
+   "E02:evt-4971316f28",
+   "E02:evt-99f6292f69",
+   "E02:evt-53709abb8d",
+   "E02:evt-756e4ad596",
+   "E02:evt-a786f0a220",
+   "E02:evt-da7d76791e",
+   "E02:evt-d44d745825",
+   "E02:evt-48775dfb7b",
+   "E02:evt-fe4565b1c3",
+   "E02:evt-1685223132",
+   "E02:evt-908faff869",
+   "E02:evt-20d941e9bc",
+   "E02:evt-d5b7a8536",
+   "E02:evt-3d5f15cc5c",
+   "E02:evt-a0c8645bc",
+   "E02:evt-b1e19b5a38",
+   "E02:evt-cbff64561c",
+   "E02:evt-b439b5541e",
+   "E02:evt-b4fedf5892",
+   "E02:evt-d5cff151d",
+   "E02:evt-dad568a984",
+   "E02:evt-71aa5b3f84",
+   "E02:evt-7acc5d11fe",
+   "E02:evt-850e6dc5e6",
+   "E02:evt-8be2311ddb",
+   "E02:evt-7a5cd9521f",
+   "E02:evt-f60d18a112"
+  ],
+  "summary": "32 HelpDeskr event(s) by tb-sync-svc from 198.18.7.41; this identity normally acts only from 10.20.4.0/24 and no E15 flow can witness it.",
+  "details": {
+   "tokens": [
+    "export.create",
+    "export.delete",
+    "export.download",
+    "ticket.read",
+    "ticket.search"
+   ],
+   "user_agents": []
+  },
+  "fid": "F007",
+  "days_to_run": 11.45,
+  "base_severity": 80,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 75,
+  "title": "Searching support tickets for secrets",
+  "ts_first": "2026-08-11T17:42:00",
+  "ts_last": "2026-08-11T17:56:51",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-43137d98e2",
+   "E02:evt-ec832c0313",
+   "E02:evt-521b981f94",
+   "E02:evt-cc09774f28",
+   "E02:evt-99f6292f69",
+   "E02:evt-fe4565b1c3",
+   "E02:evt-908faff869"
+  ],
+  "summary": "7 ticket search(es) by tb-sync-svc for credential-like terms: access key; api_key; credentials; password; private key; secret; token",
+  "details": {},
+  "fid": "F008",
+  "days_to_run": 11.45,
+  "base_severity": 75,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "chain",
+  "category": "detection",
+  "severity": 90,
+  "title": "Credential lifted from a ticket, then used from new addresses",
+  "ts_first": "2026-08-11T17:58:10",
+  "ts_last": "2026-08-16T04:43:57",
+  "entity": "bvk-7f3a",
+  "cred": "bvk-7f3a",
+  "ip": "198.18.7.23, 198.18.7.24, 198.18.7.41, 198.18.7.77",
+  "refs": [
+   "E02:evt-20d941e9bc",
+   "E05:bv-dccaa92256",
+   "E05:bv-80ffa5124a",
+   "E05:bv-aaca09c106",
+   "E05:bv-50cd0e6713",
+   "E05:bv-580f0644ae",
+   "E05:bv-edb0081dad",
+   "E05:bv-94baddc5d7",
+   "E05:bv-96fc4a18f0",
+   "E05:bv-ca1e315567",
+   "E05:bv-6134541df5",
+   "E05:bv-9e7cc10eba",
+   "E05:bv-98ef6d26c3",
+   "E05:bv-76e77ccbfd",
+   "E05:bv-31d8d36b60",
+   "E05:bv-19d55400d6",
+   "E05:bv-ccaace7709",
+   "E05:bv-94702d0dd2",
+   "E05:bv-26085422b4",
+   "E05:bv-21aa206733",
+   "E05:bv-c0610448f2",
+   "E05:bv-4c9d575af3",
+   "E05:bv-bee22e9df5",
+   "E05:bv-879f410874",
+   "E05:bv-f93e7eb68e",
+   "E05:bv-8e2ef081ee",
+   "E05:bv-6d253b546f",
+   "E05:bv-93f28bb8d8",
+   "E05:bv-bec6f80d63",
+   "E05:bv-41cd44b90f",
+   "E05:bv-e6b0b381a",
+   "E05:bv-302ee1361d",
+   "E05:bv-932a5c15e4",
+   "E05:bv-935d110949",
+   "E05:bv-80c8e70d8e",
+   "E05:bv-9d9aa1eda8",
+   "E05:bv-3508224b08",
+   "E05:bv-bac47148fa",
+   "E05:bv-d76c70cfc",
+   "E05:bv-c507839edb",
+   "E05:bv-7ec9842156",
+   "E05:bv-49fbfa366d",
+   "E05:bv-bc555c47da"
+  ],
+  "summary": "TKT-48213 holds bvk-7f3a (E13 support-team chat, 25 Jun 2026 11:31 (s.iyer: 'Their storage access key is in there, bvk-7f3a')). It was read by tb-sync-svc from 198.18.7.41 on 11 Aug 17:58 UTC; bvk-7f3a was then used 42 time(s) from 198.18.7.23, 198.18.7.24, 198.18.7.77, starting 14 Aug 21:06 UTC.",
+  "details": {},
+  "fid": "F009",
+  "days_to_run": 11.438773148148147,
+  "base_severity": 90,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:00:10",
+  "ts_last": "2026-08-11T18:04:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-d5b7a8536",
+   "E02:evt-3d5f15cc5c",
+   "E02:evt-a0c8645bc"
+  ],
+  "summary": "Export EXP-5410 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.41.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F010",
+  "days_to_run": 11.43738425925926,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:08:10",
+  "ts_last": "2026-08-11T18:12:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-c69c1b1b14",
+   "E02:evt-622baffbf7",
+   "E02:evt-17cad941aa"
+  ],
+  "summary": "Export EXP-5411 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.58.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F011",
+  "days_to_run": 11.431828703703705,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 95,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-11T18:08:10",
+  "ts_last": "2026-08-11T19:03:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-c69c1b1b14",
+   "E02:evt-622baffbf7",
+   "E02:evt-17cad941aa",
+   "E02:evt-bdf02ed329",
+   "E02:evt-864b5b9d27",
+   "E02:evt-a56029a1fb",
+   "E02:evt-c83baf719",
+   "E02:evt-b1f476d3b7",
+   "E02:evt-5f21a41d55",
+   "E02:evt-ee631222f4",
+   "E02:evt-55a7c3bced",
+   "E02:evt-f8038798f",
+   "E02:evt-55c165a49e",
+   "E02:evt-fc0b2d0277",
+   "E02:evt-3fe76f60c4"
+  ],
+  "summary": "15-event session by tb-sync-svc from 198.18.7.58 (untrusted): 3 unknown action(s): export.create, export.delete, export.download; 100% of transitions never made by the sync; started 30.2 sd away from the usual sync time.",
+  "details": {
+   "score": 95,
+   "ua_flags": []
+  },
+  "fid": "F012",
+  "days_to_run": 11.431828703703705,
+  "base_severity": 95,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-11T18:08:10",
+  "ts_last": "2026-08-11T19:03:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-c69c1b1b14",
+   "E02:evt-622baffbf7",
+   "E02:evt-17cad941aa",
+   "E02:evt-bdf02ed329",
+   "E02:evt-864b5b9d27",
+   "E02:evt-a56029a1fb",
+   "E02:evt-c83baf719",
+   "E02:evt-b1f476d3b7",
+   "E02:evt-5f21a41d55",
+   "E02:evt-ee631222f4",
+   "E02:evt-55a7c3bced",
+   "E02:evt-f8038798f",
+   "E02:evt-55c165a49e",
+   "E02:evt-fc0b2d0277",
+   "E02:evt-3fe76f60c4"
+  ],
+  "summary": "15 event(s) by tb-sync-svc (untrusted session from 198.18.7.58) use 3 action(s) that witnessed sync sessions never use: export.create, export.delete, export.download. Records touched: 15.",
+  "details": {
+   "tokens": [
+    "export.create",
+    "export.delete",
+    "export.download"
+   ],
+   "records": 15,
+   "session_trust": "untrusted"
+  },
+  "fid": "F013",
+  "days_to_run": 11.431828703703705,
+  "base_severity": 90,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 80,
+  "title": "Link-only integration identity used off the private link",
+  "ts_first": "2026-08-11T18:08:10",
+  "ts_last": "2026-08-11T19:03:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-c69c1b1b14",
+   "E02:evt-622baffbf7",
+   "E02:evt-17cad941aa",
+   "E02:evt-bdf02ed329",
+   "E02:evt-864b5b9d27",
+   "E02:evt-a56029a1fb",
+   "E02:evt-c83baf719",
+   "E02:evt-b1f476d3b7",
+   "E02:evt-5f21a41d55",
+   "E02:evt-ee631222f4",
+   "E02:evt-55a7c3bced",
+   "E02:evt-f8038798f",
+   "E02:evt-55c165a49e",
+   "E02:evt-fc0b2d0277",
+   "E02:evt-3fe76f60c4"
+  ],
+  "summary": "15 HelpDeskr event(s) by tb-sync-svc from 198.18.7.58; this identity normally acts only from 10.20.4.0/24 and no E15 flow can witness it.",
+  "details": {
+   "tokens": [
+    "export.create",
+    "export.delete",
+    "export.download"
+   ],
+   "user_agents": []
+  },
+  "fid": "F014",
+  "days_to_run": 11.431828703703705,
+  "base_severity": 80,
+  "alert": true,
+  "paged": false,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:16:10",
+  "ts_last": "2026-08-11T18:20:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-b1e19b5a38",
+   "E02:evt-cbff64561c",
+   "E02:evt-b439b5541e"
+  ],
+  "summary": "Export EXP-5412 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.41.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F015",
+  "days_to_run": 11.426273148148148,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:24:10",
+  "ts_last": "2026-08-11T18:28:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-bdf02ed329",
+   "E02:evt-864b5b9d27",
+   "E02:evt-a56029a1fb"
+  ],
+  "summary": "Export EXP-5413 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.58.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F016",
+  "days_to_run": 11.420717592592593,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:29:10",
+  "ts_last": "2026-08-11T18:33:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-b4fedf5892",
+   "E02:evt-d5cff151d",
+   "E02:evt-dad568a984"
+  ],
+  "summary": "Export EXP-5414 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.41.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F017",
+  "days_to_run": 11.41724537037037,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:36:10",
+  "ts_last": "2026-08-11T18:40:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-c83baf719",
+   "E02:evt-b1f476d3b7",
+   "E02:evt-5f21a41d55"
+  ],
+  "summary": "Export EXP-5415 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.58.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F018",
+  "days_to_run": 11.412384259259259,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:41:10",
+  "ts_last": "2026-08-11T18:45:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-71aa5b3f84",
+   "E02:evt-7acc5d11fe",
+   "E02:evt-850e6dc5e6"
+  ],
+  "summary": "Export EXP-5416 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.41.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F019",
+  "days_to_run": 11.408912037037037,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:46:10",
+  "ts_last": "2026-08-11T18:50:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-ee631222f4",
+   "E02:evt-55a7c3bced",
+   "E02:evt-f8038798f"
+  ],
+  "summary": "Export EXP-5417 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.58.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F020",
+  "days_to_run": 11.405439814814814,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:54:10",
+  "ts_last": "2026-08-11T18:58:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E02:evt-8be2311ddb",
+   "E02:evt-7a5cd9521f",
+   "E02:evt-f60d18a112"
+  ],
+  "summary": "Export EXP-5418 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.41.",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F021",
+  "days_to_run": 11.39988425925926,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "exfil",
+  "category": "detection",
+  "severity": 100,
+  "title": "HelpDeskr export job outside any routine",
+  "ts_first": "2026-08-11T18:59:10",
+  "ts_last": "2026-08-11T19:03:10",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E02:evt-55c165a49e",
+   "E02:evt-fc0b2d0277",
+   "E02:evt-3fe76f60c4"
+  ],
+  "summary": "Export EXP-5419 by tb-sync-svc: export run by a software identity (the sync never needs bulk exports); job deleted 2 min after download; from 198.18.7.58. Job details:   timeout",
+  "details": {
+   "routine": false,
+   "antiforensic": true
+  },
+  "fid": "F022",
+  "days_to_run": 11.396412037037036,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 100,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-12T03:41:52",
+  "ts_last": "2026-08-12T04:02:33",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E01:req-c35c2ccaff",
+   "E01:req-d877f18b6c",
+   "E01:req-df5b599c32",
+   "E01:req-e0694c40fd",
+   "E01:req-42cdb975b3",
+   "E01:req-f030bfb8f0",
+   "E01:req-2cb75d3eac"
+  ],
+  "summary": "7-event session by key-tb-07 from 198.18.7.41 (untrusted): 4 unknown action(s): DELETE /v2/exports/{id}, GET /v2/exports/{id}/download, GET /v2/payments/search, POST /v2/vendors/export; 100% of transitions never made by the sync; started 7.7 sd away from the usual sync time; version 3.4.1 after fleet moved to 3.5.0.",
+  "details": {
+   "score": 100,
+   "ua_flags": [
+    "version 3.4.1 after fleet moved to 3.5.0"
+   ]
+  },
+  "fid": "F023",
+  "days_to_run": 11.033425925925926,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-12T03:41:52",
+  "ts_last": "2026-08-12T04:02:33",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E01:req-c35c2ccaff",
+   "E01:req-d877f18b6c",
+   "E01:req-df5b599c32",
+   "E01:req-e0694c40fd",
+   "E01:req-42cdb975b3",
+   "E01:req-f030bfb8f0",
+   "E01:req-2cb75d3eac"
+  ],
+  "summary": "7 event(s) by key-tb-07 (untrusted session from 198.18.7.41) use 4 action(s) that witnessed sync sessions never use: DELETE /v2/exports/{id}, GET /v2/exports/{id}/download, GET /v2/payments/search, POST /v2/vendors/export. Records touched: 21000.",
+  "details": {
+   "tokens": [
+    "DELETE /v2/exports/{id}",
+    "GET /v2/exports/{id}/download",
+    "GET /v2/payments/search",
+    "POST /v2/vendors/export"
+   ],
+   "records": 21000,
+   "session_trust": "untrusted"
+  },
+  "fid": "F024",
+  "days_to_run": 11.033425925925926,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 80,
+  "title": "Link-only integration identity used off the private link",
+  "ts_first": "2026-08-12T03:41:52",
+  "ts_last": "2026-08-12T04:02:33",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.41",
+  "refs": [
+   "E01:req-c35c2ccaff",
+   "E01:req-d877f18b6c",
+   "E01:req-df5b599c32",
+   "E01:req-e0694c40fd",
+   "E01:req-42cdb975b3",
+   "E01:req-f030bfb8f0",
+   "E01:req-2cb75d3eac"
+  ],
+  "summary": "7 LedgerOne event(s) by key-tb-07 from 198.18.7.41; this identity normally acts only from 10.20.4.0/24 and no E15 flow can witness it.",
+  "details": {
+   "tokens": [
+    "DELETE /v2/exports/{id}",
+    "GET /v2/exports/{id}/download",
+    "GET /v2/payments/search",
+    "POST /v2/vendors/export"
+   ],
+   "user_agents": [
+    "TallyBridge-Sync/3.4.1"
+   ]
+  },
+  "fid": "F025",
+  "days_to_run": 11.033425925925926,
+  "base_severity": 80,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 100,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-12T03:46:59",
+  "ts_last": "2026-08-12T03:58:07",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E01:req-f4ac3b2f1b",
+   "E01:req-5dc9c95246",
+   "E01:req-c0b664c425",
+   "E01:req-51b30fba51",
+   "E01:req-507360d11e"
+  ],
+  "summary": "5-event session by key-tb-07 from 198.18.7.58 (untrusted): 3 unknown action(s): GET /v2/exports/{id}/download, GET /v2/payments/search, POST /v2/vendors/export; 100% of transitions never made by the sync; started 8.0 sd away from the usual sync time; version 3.4.1 after fleet moved to 3.5.0.",
+  "details": {
+   "score": 100,
+   "ua_flags": [
+    "version 3.4.1 after fleet moved to 3.5.0"
+   ]
+  },
+  "fid": "F026",
+  "days_to_run": 11.029872685185186,
+  "base_severity": 100,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-12T03:46:59",
+  "ts_last": "2026-08-12T03:58:07",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E01:req-f4ac3b2f1b",
+   "E01:req-5dc9c95246",
+   "E01:req-c0b664c425",
+   "E01:req-51b30fba51",
+   "E01:req-507360d11e"
+  ],
+  "summary": "5 event(s) by key-tb-07 (untrusted session from 198.18.7.58) use 3 action(s) that witnessed sync sessions never use: GET /v2/exports/{id}/download, GET /v2/payments/search, POST /v2/vendors/export. Records touched: 20660.",
+  "details": {
+   "tokens": [
+    "GET /v2/exports/{id}/download",
+    "GET /v2/payments/search",
+    "POST /v2/vendors/export"
+   ],
+   "records": 20660,
+   "session_trust": "untrusted"
+  },
+  "fid": "F027",
+  "days_to_run": 11.029872685185186,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 80,
+  "title": "Link-only integration identity used off the private link",
+  "ts_first": "2026-08-12T03:46:59",
+  "ts_last": "2026-08-12T03:58:07",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "198.18.7.58",
+  "refs": [
+   "E01:req-f4ac3b2f1b",
+   "E01:req-5dc9c95246",
+   "E01:req-c0b664c425",
+   "E01:req-51b30fba51",
+   "E01:req-507360d11e"
+  ],
+  "summary": "5 LedgerOne event(s) by key-tb-07 from 198.18.7.58; this identity normally acts only from 10.20.4.0/24 and no E15 flow can witness it.",
+  "details": {
+   "tokens": [
+    "GET /v2/exports/{id}/download",
+    "GET /v2/payments/search",
+    "POST /v2/vendors/export"
+   ],
+   "user_agents": [
+    "TallyBridge-Sync/3.4.1"
+   ]
+  },
+  "fid": "F028",
+  "days_to_run": 11.029872685185186,
+  "base_severity": 80,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "leavers",
+  "category": "governance",
+  "severity": 65,
+  "title": "Account of a former employee still in use",
+  "ts_first": "2026-08-13T09:02:00",
+  "ts_last": "2026-08-13T09:02:00",
+  "entity": "r.menon",
+  "cred": "r.menon",
+  "ip": "",
+  "refs": [
+   "E03:sso-bb8ab61e08"
+  ],
+  "summary": "Rohan Menon (r.menon, Accounts Payable Clerk) left on 30 Jun 2026; after that: 1 E03 sign-ins. Devices: dev-81546; addresses: 172.16.8.44.",
+  "details": {},
+  "fid": "F029",
+  "days_to_run": 9.811111111111112,
+  "base_severity": 65,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "territory",
+  "category": "detection",
+  "severity": 85,
+  "title": "Storage key reading outside its territory",
+  "ts_first": "2026-08-14T21:06:57",
+  "ts_last": "2026-08-14T23:58:57",
+  "entity": "key:bvk-7f3a",
+  "cred": "key:bvk-7f3a",
+  "ip": "198.18.7.23, 198.18.7.24, 198.18.7.77",
+  "refs": [
+   "E05:bv-dccaa92256",
+   "E05:bv-80ffa5124a",
+   "E05:bv-aaca09c106",
+   "E05:bv-50cd0e6713",
+   "E05:bv-580f0644ae",
+   "E05:bv-edb0081dad",
+   "E05:bv-94baddc5d7",
+   "E05:bv-96fc4a18f0",
+   "E05:bv-ca1e315567",
+   "E05:bv-6134541df5",
+   "E05:bv-9e7cc10eba"
+  ],
+  "summary": "11 BlueVault LIST/READ by key:bvk-7f3a under /, /finance, /finance/bank-instructions, /finance/statements, /hr - folders it never uses - from 198.18.7.23, 198.18.7.24, 198.18.7.77. 13,627,755 bytes.",
+  "details": {
+   "paths": [
+    "/",
+    "/finance",
+    "/finance/bank-instructions",
+    "/finance/bank-instructions/payment-run-template.xlsx",
+    "/finance/bank-instructions/vendor-bank-details-2026.xlsx",
+    "/finance/statements"
+   ]
+  },
+  "fid": "F030",
+  "days_to_run": 8.307673611111111,
+  "base_severity": 85,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "territory",
+  "category": "detection",
+  "severity": 85,
+  "title": "Storage key reading outside its territory",
+  "ts_first": "2026-08-15T00:10:57",
+  "ts_last": "2026-08-15T22:04:57",
+  "entity": "key:bvk-7f3a",
+  "cred": "key:bvk-7f3a",
+  "ip": "(blank), 198.18.7.23, 198.18.7.24, 198.18.7.77",
+  "refs": [
+   "E05:bv-98ef6d26c3",
+   "E05:bv-76e77ccbfd",
+   "E05:bv-31d8d36b60",
+   "E05:bv-1fee8bb8e",
+   "E05:bv-19d55400d6",
+   "E05:bv-ccaace7709",
+   "E05:bv-94702d0dd2",
+   "E05:bv-26085422b4",
+   "E05:bv-21aa206733",
+   "E05:bv-c0610448f2",
+   "E05:bv-4c9d575af3",
+   "E05:bv-bee22e9df5",
+   "E05:bv-879f410874",
+   "E05:bv-f93e7eb68e",
+   "E05:bv-8e2ef081ee",
+   "E05:bv-21c4f5a5d1",
+   "E05:bv-6d253b546f",
+   "E05:bv-93f28bb8d8",
+   "E05:bv-bec6f80d63",
+   "E05:bv-41cd44b90f",
+   "E05:bv-e6b0b381a",
+   "E05:bv-302ee1361d",
+   "E05:bv-932a5c15e4",
+   "E05:bv-935d110949",
+   "E05:bv-80c8e70d8e",
+   "E05:bv-9d9aa1eda8",
+   "E05:bv-3508224b08",
+   "E05:bv-bac47148fa",
+   "E05:bv-d76c70cfc",
+   "E05:bv-c507839edb",
+   "E05:bv-7ec9842156",
+   "E05:bv-49fbfa366d"
+  ],
+  "summary": "32 BlueVault READ by key:bvk-7f3a under /finance/bank-instructions, /finance/statements - folders it never uses - from 198.18.7.23, 198.18.7.24, 198.18.7.77, no address. 70,958,345 bytes.",
+  "details": {
+   "paths": [
+    "/finance/bank-instructions/payment-run-template.xlsx",
+    "/finance/bank-instructions/vendor-bank-details-2026.xlsx",
+    "/finance/statements/stmt-2026-01.pdf",
+    "/finance/statements/stmt-2026-02.pdf",
+    "/finance/statements/stmt-2026-03.pdf",
+    "/finance/statements/stmt-2026-04.pdf"
+   ]
+  },
+  "fid": "F031",
+  "days_to_run": 8.179895833333333,
+  "base_severity": 85,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "identity",
+  "category": "detection",
+  "severity": 75,
+  "title": "Password accepted, MFA refused, from a city never used",
+  "ts_first": "2026-08-15T16:20:00",
+  "ts_last": "2026-08-15T16:24:00",
+  "entity": "a.kapoor",
+  "cred": "a.kapoor",
+  "ip": "198.18.7.77",
+  "refs": [
+   "E03:sso-74805f5dd1",
+   "E03:sso-5e1305b0b4",
+   "E03:sso-562f41d2b5"
+  ],
+  "summary": "a.kapoor: 3 failed sign-in(s) from 198.18.7.77 (Mumbai); the last one passed the password and failed only at MFA. Treat the password as known to someone else.",
+  "details": {},
+  "fid": "F032",
+  "days_to_run": 7.506944444444445,
+  "base_severity": 75,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "territory",
+  "category": "detection",
+  "severity": 85,
+  "title": "Storage key reading outside its territory",
+  "ts_first": "2026-08-16T04:43:57",
+  "ts_last": "2026-08-16T04:43:57",
+  "entity": "key:bvk-7f3a",
+  "cred": "key:bvk-7f3a",
+  "ip": "198.18.7.77",
+  "refs": [
+   "E05:bv-bc555c47da"
+  ],
+  "summary": "1 BlueVault LIST by key:bvk-7f3a under /finance - folders it never uses - from 198.18.7.77. 0 bytes.",
+  "details": {
+   "paths": [
+    "/finance"
+   ]
+  },
+  "fid": "F033",
+  "days_to_run": 6.9903125,
+  "base_severity": 85,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 95,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-17T12:10:00",
+  "ts_last": "2026-08-17T12:40:39",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-eafb1d40b5",
+   "E01:req-c4fd0ea10f",
+   "E01:req-a9f6f2b6d3",
+   "E01:req-8947dbdf1d",
+   "E01:req-f4f330ea48",
+   "E01:req-71db731ee6",
+   "E01:req-29a6ef5939",
+   "E01:req-2c8ec2156a",
+   "E01:req-2a9dcab03c",
+   "E01:req-f2f7990305",
+   "E01:req-88dcd38a8d",
+   "E01:req-39724f410d",
+   "E01:req-964a81f5aa",
+   "E01:req-544a5e38ac",
+   "E01:req-5eb2005919",
+   "E01:req-99e3c534cd",
+   "E01:req-11f2148945",
+   "E01:req-c82084bd00"
+  ],
+  "summary": "18-event session by key-tb-07 from 10.20.4.77 (untrusted): 2 unknown action(s): GET /v2/payments/search, GET /v2/vendors/bank-details; 100% of transitions never made by the sync; started 41.5 sd away from the usual sync time.",
+  "details": {
+   "score": 95,
+   "ua_flags": []
+  },
+  "fid": "F034",
+  "days_to_run": 5.680555555555555,
+  "base_severity": 95,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-17T12:10:00",
+  "ts_last": "2026-08-17T12:40:39",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-eafb1d40b5",
+   "E01:req-c4fd0ea10f",
+   "E01:req-a9f6f2b6d3",
+   "E01:req-8947dbdf1d",
+   "E01:req-f4f330ea48",
+   "E01:req-71db731ee6",
+   "E01:req-29a6ef5939",
+   "E01:req-2c8ec2156a",
+   "E01:req-2a9dcab03c",
+   "E01:req-f2f7990305",
+   "E01:req-88dcd38a8d",
+   "E01:req-39724f410d",
+   "E01:req-964a81f5aa",
+   "E01:req-544a5e38ac",
+   "E01:req-5eb2005919",
+   "E01:req-99e3c534cd",
+   "E01:req-11f2148945",
+   "E01:req-c82084bd00"
+  ],
+  "summary": "18 event(s) by key-tb-07 (untrusted session from 10.20.4.77) use 2 action(s) that witnessed sync sessions never use: GET /v2/payments/search, GET /v2/vendors/bank-details. Records touched: 4890.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/search",
+    "GET /v2/vendors/bank-details"
+   ],
+   "records": 4890,
+   "session_trust": "untrusted"
+  },
+  "fid": "F035",
+  "days_to_run": 5.680555555555555,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 78,
+  "title": "New host speaking for a link integration",
+  "ts_first": "2026-08-17T12:10:00",
+  "ts_last": "2026-08-17T12:40:39",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-eafb1d40b5",
+   "E01:req-c4fd0ea10f",
+   "E01:req-a9f6f2b6d3",
+   "E01:req-8947dbdf1d",
+   "E01:req-f4f330ea48",
+   "E01:req-71db731ee6",
+   "E01:req-29a6ef5939",
+   "E01:req-2c8ec2156a",
+   "E01:req-2a9dcab03c",
+   "E01:req-f2f7990305",
+   "E01:req-88dcd38a8d",
+   "E01:req-39724f410d",
+   "E01:req-964a81f5aa",
+   "E01:req-544a5e38ac",
+   "E01:req-5eb2005919",
+   "E01:req-99e3c534cd",
+   "E01:req-11f2148945",
+   "E01:req-c82084bd00"
+  ],
+  "summary": "18 LedgerOne event(s) by key-tb-07 from 10.20.4.77, inside the link range but not one of the 6 hosts that carry this integration day to day; the vendor's flow log labels it 'tb-build-02'.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/search",
+    "GET /v2/vendors/bank-details"
+   ],
+   "flow_label": "tb-build-02"
+  },
+  "fid": "F036",
+  "days_to_run": 5.680555555555555,
+  "base_severity": 78,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 95,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-18T12:10:00",
+  "ts_last": "2026-08-18T13:01:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-1a47a2b426",
+   "E01:req-c44772fad2",
+   "E01:req-8ea2fcaa6a",
+   "E01:req-e770429fbd",
+   "E01:req-4e2770c946",
+   "E01:req-86398470ed",
+   "E01:req-f983a08538",
+   "E01:req-3b09b068ea",
+   "E01:req-8a30fb2eef",
+   "E01:req-a2cddffcaa",
+   "E01:req-8cda3b07b9",
+   "E01:req-fab06007b6",
+   "E01:req-4fc25525eb",
+   "E01:req-310345448f",
+   "E01:req-36acdc3803",
+   "E01:req-50f92112a6",
+   "E01:req-dee1a1abbe",
+   "E01:req-e3969e19cb",
+   "E01:req-fe4bd4fe93",
+   "E01:req-ab03db20b8"
+  ],
+  "summary": "20-event session by key-tb-07 from 10.20.4.77 (untrusted): 4 unknown action(s): DELETE /v2/exports/{id}, GET /v2/payments/search, GET /v2/vendors/bank-details, POST /v2/payments/export; 100% of transitions never made by the sync; started 41.5 sd away from the usual sync time.",
+  "details": {
+   "score": 95,
+   "ua_flags": []
+  },
+  "fid": "F037",
+  "days_to_run": 4.680555555555555,
+  "base_severity": 95,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-18T12:10:00",
+  "ts_last": "2026-08-18T13:01:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-1a47a2b426",
+   "E01:req-c44772fad2",
+   "E01:req-8ea2fcaa6a",
+   "E01:req-e770429fbd",
+   "E01:req-4e2770c946",
+   "E01:req-86398470ed",
+   "E01:req-f983a08538",
+   "E01:req-3b09b068ea",
+   "E01:req-8a30fb2eef",
+   "E01:req-a2cddffcaa",
+   "E01:req-8cda3b07b9",
+   "E01:req-fab06007b6",
+   "E01:req-4fc25525eb",
+   "E01:req-310345448f",
+   "E01:req-36acdc3803",
+   "E01:req-50f92112a6",
+   "E01:req-dee1a1abbe",
+   "E01:req-e3969e19cb",
+   "E01:req-fe4bd4fe93",
+   "E01:req-ab03db20b8"
+  ],
+  "summary": "20 event(s) by key-tb-07 (untrusted session from 10.20.4.77) use 4 action(s) that witnessed sync sessions never use: DELETE /v2/exports/{id}, GET /v2/payments/search, GET /v2/vendors/bank-details, POST /v2/payments/export. Records touched: 8940.",
+  "details": {
+   "tokens": [
+    "DELETE /v2/exports/{id}",
+    "GET /v2/payments/search",
+    "GET /v2/vendors/bank-details",
+    "POST /v2/payments/export"
+   ],
+   "records": 8940,
+   "session_trust": "untrusted"
+  },
+  "fid": "F038",
+  "days_to_run": 4.680555555555555,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 78,
+  "title": "New host speaking for a link integration",
+  "ts_first": "2026-08-18T12:10:00",
+  "ts_last": "2026-08-18T13:01:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-1a47a2b426",
+   "E01:req-c44772fad2",
+   "E01:req-8ea2fcaa6a",
+   "E01:req-e770429fbd",
+   "E01:req-4e2770c946",
+   "E01:req-86398470ed",
+   "E01:req-f983a08538",
+   "E01:req-3b09b068ea",
+   "E01:req-8a30fb2eef",
+   "E01:req-a2cddffcaa",
+   "E01:req-8cda3b07b9",
+   "E01:req-fab06007b6",
+   "E01:req-4fc25525eb",
+   "E01:req-310345448f",
+   "E01:req-36acdc3803",
+   "E01:req-50f92112a6",
+   "E01:req-dee1a1abbe",
+   "E01:req-e3969e19cb",
+   "E01:req-fe4bd4fe93",
+   "E01:req-ab03db20b8"
+  ],
+  "summary": "20 LedgerOne event(s) by key-tb-07 from 10.20.4.77, inside the link range but not one of the 6 hosts that carry this integration day to day; the vendor's flow log labels it 'tb-build-02'.",
+  "details": {
+   "tokens": [
+    "DELETE /v2/exports/{id}",
+    "GET /v2/payments/search",
+    "GET /v2/vendors/bank-details",
+    "POST /v2/payments/export"
+   ],
+   "flow_label": "tb-build-02"
+  },
+  "fid": "F039",
+  "days_to_run": 4.680555555555555,
+  "base_severity": 78,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 95,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-18T12:20:00",
+  "ts_last": "2026-08-18T12:28:00",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E02:evt-5c82bfc816",
+   "E02:evt-6a62a5df49",
+   "E02:evt-6e64a3d77",
+   "E02:evt-bf79f5279b",
+   "E02:evt-3f3ed80843"
+  ],
+  "summary": "5-event session by tb-sync-svc from 10.20.4.77 (untrusted): 1 unknown action(s): ticket.search; 100% of transitions never made by the sync; started 41.7 sd away from the usual sync time.",
+  "details": {
+   "score": 95,
+   "ua_flags": []
+  },
+  "fid": "F040",
+  "days_to_run": 4.673611111111111,
+  "base_severity": 95,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-18T12:20:00",
+  "ts_last": "2026-08-18T12:28:00",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E02:evt-5c82bfc816",
+   "E02:evt-6a62a5df49",
+   "E02:evt-6e64a3d77",
+   "E02:evt-bf79f5279b",
+   "E02:evt-3f3ed80843"
+  ],
+  "summary": "5 event(s) by tb-sync-svc (untrusted session from 10.20.4.77) use 1 action(s) that witnessed sync sessions never use: ticket.search. Records touched: 5.",
+  "details": {
+   "tokens": [
+    "ticket.search"
+   ],
+   "records": 5,
+   "session_trust": "untrusted"
+  },
+  "fid": "F041",
+  "days_to_run": 4.673611111111111,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 78,
+  "title": "New host speaking for a link integration",
+  "ts_first": "2026-08-18T12:20:00",
+  "ts_last": "2026-08-18T12:28:00",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E02:evt-5c82bfc816",
+   "E02:evt-6a62a5df49",
+   "E02:evt-6e64a3d77",
+   "E02:evt-bf79f5279b",
+   "E02:evt-3f3ed80843"
+  ],
+  "summary": "5 HelpDeskr event(s) by tb-sync-svc from 10.20.4.77, inside the link range but not one of the 6 hosts that carry this integration day to day; the vendor's flow log labels it 'tb-build-02'.",
+  "details": {
+   "tokens": [
+    "ticket.search"
+   ],
+   "flow_label": "tb-build-02"
+  },
+  "fid": "F042",
+  "days_to_run": 4.673611111111111,
+  "base_severity": 78,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 95,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-08-19T12:10:00",
+  "ts_last": "2026-08-19T12:42:04",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-1e745672ca",
+   "E01:req-e11328784c",
+   "E01:req-985e7a55eb",
+   "E01:req-e728c5de76",
+   "E01:req-a9c8fb6dc0",
+   "E01:req-8db0a7c308",
+   "E01:req-62e36691db",
+   "E01:req-be1aedf60f",
+   "E01:req-db897e0754",
+   "E01:req-52e4937e8d",
+   "E01:req-70748f7f4f",
+   "E01:req-539ad9f772",
+   "E01:req-9fe0ff3329",
+   "E01:req-80522d08a5",
+   "E01:req-76695ca776",
+   "E01:req-f263eb7afc",
+   "E01:req-23db42417",
+   "E01:req-d97c30be81"
+  ],
+  "summary": "18-event session by key-tb-07 from 10.20.4.77 (untrusted): 2 unknown action(s): GET /v2/payments/search, GET /v2/vendors/bank-details; 100% of transitions never made by the sync; started 41.5 sd away from the usual sync time.",
+  "details": {
+   "score": 95,
+   "ua_flags": []
+  },
+  "fid": "F043",
+  "days_to_run": 3.6805555555555554,
+  "base_severity": 95,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-08-19T12:10:00",
+  "ts_last": "2026-08-19T12:42:04",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-1e745672ca",
+   "E01:req-e11328784c",
+   "E01:req-985e7a55eb",
+   "E01:req-e728c5de76",
+   "E01:req-a9c8fb6dc0",
+   "E01:req-8db0a7c308",
+   "E01:req-62e36691db",
+   "E01:req-be1aedf60f",
+   "E01:req-db897e0754",
+   "E01:req-52e4937e8d",
+   "E01:req-70748f7f4f",
+   "E01:req-539ad9f772",
+   "E01:req-9fe0ff3329",
+   "E01:req-80522d08a5",
+   "E01:req-76695ca776",
+   "E01:req-f263eb7afc",
+   "E01:req-23db42417",
+   "E01:req-d97c30be81"
+  ],
+  "summary": "18 event(s) by key-tb-07 (untrusted session from 10.20.4.77) use 2 action(s) that witnessed sync sessions never use: GET /v2/payments/search, GET /v2/vendors/bank-details. Records touched: 5038.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/search",
+    "GET /v2/vendors/bank-details"
+   ],
+   "records": 5038,
+   "session_trust": "untrusted"
+  },
+  "fid": "F044",
+  "days_to_run": 3.6805555555555554,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 78,
+  "title": "New host speaking for a link integration",
+  "ts_first": "2026-08-19T12:10:00",
+  "ts_last": "2026-08-19T12:42:04",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E01:req-1e745672ca",
+   "E01:req-e11328784c",
+   "E01:req-985e7a55eb",
+   "E01:req-e728c5de76",
+   "E01:req-a9c8fb6dc0",
+   "E01:req-8db0a7c308",
+   "E01:req-62e36691db",
+   "E01:req-be1aedf60f",
+   "E01:req-db897e0754",
+   "E01:req-52e4937e8d",
+   "E01:req-70748f7f4f",
+   "E01:req-539ad9f772",
+   "E01:req-9fe0ff3329",
+   "E01:req-80522d08a5",
+   "E01:req-76695ca776",
+   "E01:req-f263eb7afc",
+   "E01:req-23db42417",
+   "E01:req-d97c30be81"
+  ],
+  "summary": "18 LedgerOne event(s) by key-tb-07 from 10.20.4.77, inside the link range but not one of the 6 hosts that carry this integration day to day; the vendor's flow log labels it 'tb-build-02'.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/search",
+    "GET /v2/vendors/bank-details"
+   ],
+   "flow_label": "tb-build-02"
+  },
+  "fid": "F045",
+  "days_to_run": 3.6805555555555554,
+  "base_severity": 78,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "callback",
+  "category": "change-control",
+  "severity": 58,
+  "title": "Call-back numbers on file cannot be trusted",
+  "ts_first": "2026-09-01T01:30:57",
+  "ts_last": "2026-09-07T01:44:41",
+  "entity": "key-tb-07",
+  "cred": "key-tb-07",
+  "ip": "",
+  "refs": [
+   "E19:chg-660e742eb1",
+   "E19:chg-7b0acd0a2d",
+   "E19:chg-7d723e399",
+   "E19:chg-b91c5e73f7",
+   "E19:chg-54fca4c0bb",
+   "E19:chg-fb7641d602",
+   "E19:chg-10ee7f445",
+   "E19:chg-b7831a0f2f",
+   "E19:chg-9e3ee63f60",
+   "E19:chg-56dc22580b",
+   "E19:chg-3fa760544a",
+   "E19:chg-8b0c1d5d36",
+   "E19:chg-bd68284a1b",
+   "E19:chg-7a75570162",
+   "E19:chg-67c4fb29b4",
+   "E19:chg-fc0be54e7e",
+   "E19:chg-94b94caf5e",
+   "E19:chg-5993b7f183",
+   "E19:chg-7b4ff0bd6",
+   "E19:chg-52a144301a",
+   "E19:chg-44c0b9664",
+   "E19:chg-652066ffc5",
+   "E19:chg-3bba13e048",
+   "E19:chg-59cf8e2ad2",
+   "E19:chg-591f2e8985",
+   "E19:chg-85839c0bf1",
+   "E19:chg-60000c9970",
+   "E19:chg-d7a02521b1",
+   "E19:chg-3990c03c9f",
+   "E19:chg-1a9c0fc133",
+   "E19:chg-5657d27886",
+   "E19:chg-224eeb6f2a",
+   "E19:chg-6a48d86349",
+   "E19:chg-12367eecb4",
+   "E19:chg-88322329c6",
+   "E19:chg-7883cb5cf2",
+   "E19:chg-3fd48ea50a",
+   "E19:chg-a3e25ba90e",
+   "E19:chg-8832354cb",
+   "E19:chg-9a75100cc2",
+   "E19:chg-82013b1345",
+   "E19:chg-60e5f186a7",
+   "E19:chg-a4d114a2b3",
+   "E19:chg-5e2a92cc9e",
+   "E19:chg-d47a1e8cc2",
+   "E19:chg-444b5da490",
+   "E19:chg-c86921a0fb",
+   "E19:chg-db39d86afb",
+   "E19:chg-7cc3010748",
+   "E19:chg-5e324b3be8",
+   "E19:chg-6bc92e437b",
+   "E19:chg-4fafed4630",
+   "E19:chg-fff8aa8293",
+   "E19:chg-58439e5dcd",
+   "E19:chg-bdfc561199",
+   "E19:chg-15ea9b81f5",
+   "E19:chg-12c5bd3b41",
+   "E19:chg-26648b983f",
+   "E19:chg-598039890d",
+   "E19:chg-8067573699",
+   "E19:chg-26c0811367",
+   "E19:chg-d3644182d0",
+   "E19:chg-b23ebcd1e7",
+   "E19:chg-f74b91c827",
+   "E19:chg-105e930c64",
+   "E19:chg-d8cc456b61",
+   "E19:chg-824426a0b0",
+   "E19:chg-63d7f41d2a",
+   "E19:chg-ebf26ea665",
+   "E19:chg-c79532c0ea"
+  ],
+  "summary": "Software rewrote contact details for 66 vendor(s) in the 30 days before the next run (70 changes, no approval reference). A call-back to the number on file proves nothing for them; 1 are on the hold/verify list: V-0162.",
+  "details": {},
+  "fid": "F046",
+  "days_to_run": 7.124340277777778,
+  "base_severity": 58,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-01T01:30:57",
+  "ts_last": "2026-09-01T01:30:57",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.12",
+  "refs": [
+   "E18:req-d988287087"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F047",
+  "days_to_run": 7.124340277777778,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-01T01:31:27",
+  "ts_last": "2026-09-01T01:40:57",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-6350a807f9",
+   "E18:req-fab162b261",
+   "E18:req-5b24baaaa2",
+   "E18:req-7f4f24a906"
+  ],
+  "summary": "4 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F048",
+  "days_to_run": 7.123993055555555,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-01T01:31:29",
+  "ts_last": "2026-09-01T01:31:29",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.13",
+  "refs": [
+   "E18:req-2d2c7d742b"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F049",
+  "days_to_run": 7.123969907407408,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-01T01:31:41",
+  "ts_last": "2026-09-01T01:43:51",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.11",
+  "refs": [
+   "E18:req-4bd23aaf25",
+   "E18:req-83e3cee6b0"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F050",
+  "days_to_run": 7.123831018518518,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-01T01:39:22",
+  "ts_last": "2026-09-01T01:39:22",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.15",
+  "refs": [
+   "E18:req-fce5b7f4b0"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F051",
+  "days_to_run": 7.11849537037037,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-01T01:44:28",
+  "ts_last": "2026-09-01T01:44:28",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-3b35ffd1c6"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F052",
+  "days_to_run": 7.114953703703704,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-02T01:30:24",
+  "ts_last": "2026-09-02T01:43:34",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.13",
+  "refs": [
+   "E18:req-2ab9aa4c0d",
+   "E18:req-7b4a539665",
+   "E18:req-104d0cbcd4",
+   "E18:req-1bd9e22f64"
+  ],
+  "summary": "4 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F053",
+  "days_to_run": 6.124722222222222,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-02T01:31:00",
+  "ts_last": "2026-09-02T01:44:45",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.12",
+  "refs": [
+   "E18:req-4fdaa1040c",
+   "E18:req-fb86abb8fe"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F054",
+  "days_to_run": 6.124305555555556,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-02T01:35:41",
+  "ts_last": "2026-09-02T01:45:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.15",
+  "refs": [
+   "E18:req-87bc76285f",
+   "E18:req-19361cbfb3"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F055",
+  "days_to_run": 6.121053240740741,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-02T01:37:37",
+  "ts_last": "2026-09-02T01:37:37",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-6922a32eb6"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F056",
+  "days_to_run": 6.119710648148148,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-02T01:42:15",
+  "ts_last": "2026-09-02T01:42:15",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-eca53d8f4b"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F057",
+  "days_to_run": 6.116493055555556,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-03T01:31:02",
+  "ts_last": "2026-09-03T01:44:40",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.13",
+  "refs": [
+   "E18:req-8a823d5054",
+   "E18:req-95b3ded46",
+   "E18:req-5edb43a452",
+   "E18:req-b6fefa3502"
+  ],
+  "summary": "4 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F058",
+  "days_to_run": 5.124282407407407,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-03T01:35:40",
+  "ts_last": "2026-09-03T01:37:46",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-a60866518f",
+   "E18:req-b320fffc67"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F059",
+  "days_to_run": 5.121064814814815,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-03T01:40:47",
+  "ts_last": "2026-09-03T01:40:47",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.11",
+  "refs": [
+   "E18:req-77a6e21f9"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F060",
+  "days_to_run": 5.117511574074074,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 90,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-09-03T01:41:10",
+  "ts_last": "2026-09-03T01:44:30",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E18:req-15a052a5e",
+   "E18:req-93d66fcd5",
+   "E18:req-33a3928eca",
+   "E18:req-5f61b0de8"
+  ],
+  "summary": "4 event(s) by key-tb-07 (untrusted session from 10.20.4.77) use 4 action(s) that witnessed sync sessions never use: GET /v2/payments/scheduled, GET /v2/vendors/{id}, GET /v2/vendors/{id}/bank-details, PATCH /v2/vendors/{id}/bank-details. Records touched: 17.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/scheduled",
+    "GET /v2/vendors/{id}",
+    "GET /v2/vendors/{id}/bank-details",
+    "PATCH /v2/vendors/{id}/bank-details"
+   ],
+   "records": 17,
+   "session_trust": "untrusted"
+  },
+  "fid": "F061",
+  "days_to_run": 5.11724537037037,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 85,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-09-03T01:41:10",
+  "ts_last": "2026-09-03T01:44:30",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E18:req-15a052a5e",
+   "E18:req-93d66fcd5",
+   "E18:req-33a3928eca",
+   "E18:req-5f61b0de8"
+  ],
+  "summary": "4-event session by key-tb-07 from 10.20.4.77 (untrusted): 4 unknown action(s): GET /v2/payments/scheduled, GET /v2/vendors/{id}, GET /v2/vendors/{id}/bank-details, PATCH /v2/vendors/{id}/bank-details; 100% of transitions never made by the sync.",
+  "details": {
+   "score": 85,
+   "ua_flags": []
+  },
+  "fid": "F062",
+  "days_to_run": 5.11724537037037,
+  "base_severity": 85,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 78,
+  "title": "New host speaking for a link integration",
+  "ts_first": "2026-09-03T01:41:10",
+  "ts_last": "2026-09-03T01:44:30",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E18:req-15a052a5e",
+   "E18:req-93d66fcd5",
+   "E18:req-33a3928eca",
+   "E18:req-5f61b0de8"
+  ],
+  "summary": "4 LedgerOne event(s) by key-tb-07 from 10.20.4.77, inside the link range but not one of the 6 hosts that carry this integration day to day; the vendor's flow log labels it 'tb-build-02'.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/scheduled",
+    "GET /v2/vendors/{id}",
+    "GET /v2/vendors/{id}/bank-details",
+    "PATCH /v2/vendors/{id}/bank-details"
+   ],
+   "flow_label": "tb-build-02"
+  },
+  "fid": "F063",
+  "days_to_run": 5.11724537037037,
+  "base_severity": 78,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-03T01:42:54",
+  "ts_last": "2026-09-03T01:44:45",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.12",
+  "refs": [
+   "E18:req-842f25d5bb",
+   "E18:req-26ef6d4c05"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F064",
+  "days_to_run": 5.116041666666667,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-03T01:44:17",
+  "ts_last": "2026-09-03T01:44:17",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-abc9be6360"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F065",
+  "days_to_run": 5.115081018518518,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "firewall",
+  "category": "detection",
+  "severity": 98,
+  "title": "Vendor payment instructions changed without a valid human approval",
+  "ts_first": "2026-09-03T01:44:30",
+  "ts_last": "2026-09-03T01:44:30",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E19:chg-8b9888c39b",
+   "E18:req-5f61b0de8"
+  ],
+  "summary": "1 bank-field change(s) to 1 vendor(s) (V-0412) by key-tb-07. 5.1 days before the 08 Sep payment run; made by software credential key-tb-07 - no integration needs to edit payment instructions; no approval reference; preceded by 57 bank/payment lookup(s) from the same actor; request came from an unusual host (NEW_LINK_HOST).",
+  "details": {
+   "vendors": [
+    "V-0412"
+   ],
+   "score": 98
+  },
+  "fid": "F066",
+  "days_to_run": 5.1149305555555555,
+  "base_severity": 98,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-04T01:31:36",
+  "ts_last": "2026-09-04T01:37:43",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-643d5d7651",
+   "E18:req-b8e42e6498"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F067",
+  "days_to_run": 4.123888888888889,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-04T01:35:05",
+  "ts_last": "2026-09-04T01:40:03",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.15",
+  "refs": [
+   "E18:req-ac19529126",
+   "E18:req-7621374e40"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F068",
+  "days_to_run": 4.121469907407407,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-04T01:35:20",
+  "ts_last": "2026-09-04T01:41:36",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.13",
+  "refs": [
+   "E18:req-c9938e9114",
+   "E18:req-b4cbcc0904"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F069",
+  "days_to_run": 4.121296296296296,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-04T01:36:35",
+  "ts_last": "2026-09-04T01:36:35",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.11",
+  "refs": [
+   "E18:req-8a2f4fd512"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F070",
+  "days_to_run": 4.120428240740741,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-04T01:38:56",
+  "ts_last": "2026-09-04T01:44:41",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-2d356f3408",
+   "E18:req-217de0e5b3",
+   "E18:req-53ce62c0d6"
+  ],
+  "summary": "3 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F071",
+  "days_to_run": 4.1187962962962965,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-05T01:30:42",
+  "ts_last": "2026-09-05T01:44:11",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.11",
+  "refs": [
+   "E18:req-18d520f18a",
+   "E18:req-444e796a00"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F072",
+  "days_to_run": 3.124513888888889,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-05T01:30:48",
+  "ts_last": "2026-09-05T01:30:48",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.15",
+  "refs": [
+   "E18:req-eec9e7da88"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F073",
+  "days_to_run": 3.1244444444444444,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-05T01:33:39",
+  "ts_last": "2026-09-05T01:33:39",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.12",
+  "refs": [
+   "E18:req-ae3255455f"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F074",
+  "days_to_run": 3.1224652777777777,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-05T01:36:09",
+  "ts_last": "2026-09-05T01:44:17",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-70585d6aa6",
+   "E18:req-28d3a3ef37"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F075",
+  "days_to_run": 3.1207291666666666,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 50,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-05T01:39:45",
+  "ts_last": "2026-09-05T01:43:00",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-bb8056bb21",
+   "E18:req-101ff77d43",
+   "E18:req-e34773f14c",
+   "E18:req-9ccea891ed"
+  ],
+  "summary": "4 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F076",
+  "days_to_run": 3.1182291666666666,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-06T01:30:41",
+  "ts_last": "2026-09-06T01:33:09",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.12",
+  "refs": [
+   "E18:req-d6c346e70f",
+   "E18:req-f8c928c6fc"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F077",
+  "days_to_run": 2.124525462962963,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-06T01:32:06",
+  "ts_last": "2026-09-06T01:32:06",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.15",
+  "refs": [
+   "E18:req-8296cf483e"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F078",
+  "days_to_run": 2.1235416666666667,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-06T01:32:27",
+  "ts_last": "2026-09-06T01:37:43",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-b021be07cf",
+   "E18:req-267d35fd62",
+   "E18:req-a0c7db443d",
+   "E18:req-d1d016ef94"
+  ],
+  "summary": "4 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F079",
+  "days_to_run": 2.123298611111111,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-06T01:33:51",
+  "ts_last": "2026-09-06T01:44:38",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.13",
+  "refs": [
+   "E18:req-7a0d46e03c",
+   "E18:req-3d12d6440f"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F080",
+  "days_to_run": 2.122326388888889,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "detection",
+  "severity": 99,
+  "title": "Suspense: integration activity with no place in the sync ledger",
+  "ts_first": "2026-09-06T01:36:05",
+  "ts_last": "2026-09-06T01:36:05",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E18:req-bb819dfe0c"
+  ],
+  "summary": "1 event(s) by key-tb-07 (untrusted session from 10.20.4.77) use 1 action(s) that witnessed sync sessions never use: GET /v2/payments/scheduled. Records touched: 15.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/scheduled"
+   ],
+   "records": 15,
+   "session_trust": "untrusted"
+  },
+  "fid": "F081",
+  "days_to_run": 2.120775462962963,
+  "base_severity": 90,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "grammar",
+  "category": "detection",
+  "severity": 94,
+  "title": "Session does not parse as the sync's grammar",
+  "ts_first": "2026-09-06T01:36:05",
+  "ts_last": "2026-09-06T01:36:05",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E18:req-bb819dfe0c"
+  ],
+  "summary": "1-event session by key-tb-07 from 10.20.4.77 (untrusted): 1 unknown action(s): GET /v2/payments/scheduled; 100% of transitions never made by the sync.",
+  "details": {
+   "score": 85,
+   "ua_flags": []
+  },
+  "fid": "F082",
+  "days_to_run": 2.120775462962963,
+  "base_severity": 85,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "witness",
+  "category": "detection",
+  "severity": 86,
+  "title": "New host speaking for a link integration",
+  "ts_first": "2026-09-06T01:36:05",
+  "ts_last": "2026-09-06T01:36:05",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.77",
+  "refs": [
+   "E18:req-bb819dfe0c"
+  ],
+  "summary": "1 LedgerOne event(s) by key-tb-07 from 10.20.4.77, inside the link range but not one of the 6 hosts that carry this integration day to day; the vendor's flow log labels it 'tb-build-02'.",
+  "details": {
+   "tokens": [
+    "GET /v2/payments/scheduled"
+   ],
+   "flow_label": "tb-build-02"
+  },
+  "fid": "F083",
+  "days_to_run": 2.120775462962963,
+  "base_severity": 78,
+  "alert": true,
+  "paged": true,
+  "thread": "T1"
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-06T01:36:34",
+  "ts_last": "2026-09-06T01:36:34",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-ea06a25cf2"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F084",
+  "days_to_run": 2.120439814814815,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-07T01:32:32",
+  "ts_last": "2026-09-07T01:39:43",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.13",
+  "refs": [
+   "E18:req-25af1ae6c4",
+   "E18:req-8f5f68b2e1",
+   "E18:req-ab5d9c4990"
+  ],
+  "summary": "3 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F085",
+  "days_to_run": 1.1232407407407408,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-07T01:33:32",
+  "ts_last": "2026-09-07T01:39:36",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.16",
+  "refs": [
+   "E18:req-e197a3bb7a",
+   "E18:req-18b45ad9de"
+  ],
+  "summary": "2 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F086",
+  "days_to_run": 1.1225462962962962,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-07T01:38:37",
+  "ts_last": "2026-09-07T01:39:31",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.11",
+  "refs": [
+   "E18:req-cdca15c672",
+   "E18:req-5b68622034",
+   "E18:req-34997dff76"
+  ],
+  "summary": "3 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F087",
+  "days_to_run": 1.1190162037037037,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-07T01:42:52",
+  "ts_last": "2026-09-07T01:42:52",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.14",
+  "refs": [
+   "E18:req-ec18b54c50"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F088",
+  "days_to_run": 1.116064814814815,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "ledger",
+  "category": "change-control",
+  "severity": 55,
+  "title": "Announced vendor behaviour change, never reviewed",
+  "ts_first": "2026-09-07T01:44:41",
+  "ts_last": "2026-09-07T01:44:41",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "10.20.4.12",
+  "refs": [
+   "E18:req-4eedaf1512"
+  ],
+  "summary": "1 x PATCH /v2/vendors/{id}/contact by key-tb-07: new behaviour announced in E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026). Outside the learned sync ledger; needs a change review, not an incident page.",
+  "details": {
+   "announced": "E16 item 7 and E20-C release 3.6.0 (vendor contact detail sync from 1 Sep 2026)"
+  },
+  "fid": "F089",
+  "days_to_run": 1.1148032407407407,
+  "base_severity": 50,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "passport",
+  "category": "governance",
+  "severity": 61,
+  "title": "Third-party credential key-tb-07 breaks the integration controls",
+  "ts_first": "2026-09-07T13:28:29",
+  "ts_last": "2026-09-07T13:28:29",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-07",
+  "ip": "",
+  "refs": [
+   "E04:key-tb-07"
+  ],
+  "summary": "broad scope 'read:write all-modules'; no IP restriction; never expires; last review 12 Jun 2024 (817 days ago). Used 18 distinct action(s) in the logs.",
+  "details": {},
+  "fid": "F090",
+  "days_to_run": 0.6260532407407408,
+  "base_severity": 55,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "passport",
+  "category": "governance",
+  "severity": 61,
+  "title": "Third-party credential tb-sync-svc breaks the integration controls",
+  "ts_first": "2026-09-07T13:28:29",
+  "ts_last": "2026-09-07T13:28:29",
+  "entity": "TallyBridge Connect",
+  "cred": "tb-sync-svc",
+  "ip": "",
+  "refs": [
+   "E04:tb-sync-svc"
+  ],
+  "summary": "broad scope 'admin'; no IP restriction; never expires; last review 12 Jun 2024 (817 days ago). Used 5 distinct action(s) in the logs.",
+  "details": {},
+  "fid": "F091",
+  "days_to_run": 0.6260532407407408,
+  "base_severity": 55,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "passport",
+  "category": "governance",
+  "severity": 61,
+  "title": "Third-party credential key-tb-03 breaks the integration controls",
+  "ts_first": "2026-09-07T13:28:29",
+  "ts_last": "2026-09-07T13:28:29",
+  "entity": "TallyBridge Connect",
+  "cred": "key-tb-03",
+  "ip": "",
+  "refs": [
+   "E04:key-tb-03"
+  ],
+  "summary": "broad scope 'read:all'; no IP restriction; never expires; last review 12 Jun 2024 (817 days ago); legacy key still active. Used 0 distinct action(s) in the logs.",
+  "details": {},
+  "fid": "F092",
+  "days_to_run": 0.6260532407407408,
+  "base_severity": 55,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ },
+ {
+  "module": "passport",
+  "category": "governance",
+  "severity": 61,
+  "title": "Third-party credential bvk-7f3a breaks the integration controls",
+  "ts_first": "2026-09-07T13:28:29",
+  "ts_last": "2026-09-07T13:28:29",
+  "entity": "customer partner",
+  "cred": "bvk-7f3a",
+  "ip": "",
+  "refs": [
+   "E04:bvk-7f3a"
+  ],
+  "summary": "broad scope 'read:all-folders'; no IP restriction; never expires; last review 18 Feb 2025 (566 days ago). Used 4 distinct action(s) in the logs.",
+  "details": {},
+  "fid": "F093",
+  "days_to_run": 0.6260532407407408,
+  "base_severity": 55,
+  "alert": false,
+  "paged": false,
+  "thread": ""
+ }
+]
