@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vortex · CR-26-047 · Final Technical Report</title>
+<style>
+@page { size: A4; margin: 0; }
+:root{ --ink:#000; --mute:#333; --faint:#555; --line:#b5b5b5; --pale:#f1f1f1;
+  --display:"Bahnschrift","Segoe UI",sans-serif; --mono:"Consolas","Cascadia Mono",monospace; }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;font-size:7.45pt;line-height:1.3;color:var(--ink);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;text-rendering:geometricPrecision}
+.page{width:210mm;height:296.6mm;padding:7mm 10mm 6mm;overflow:hidden;display:flex;flex-direction:column;gap:2.6mm;page-break-after:always;position:relative}
+.page:last-child{page-break-after:auto}
+b,strong{font-weight:600}
+code,.id{font-family:var(--mono);font-size:.88em;color:var(--ink)}
+.nw{white-space:nowrap}
+/* header */
+.hdr{display:flex;align-items:center;gap:4mm;padding-bottom:2mm;border-bottom:.55mm solid var(--ink)}
+.brand{display:flex;align-items:center;gap:2.2mm}
+.logo{width:9mm;height:9mm;color:var(--ink)}
+.team{font-family:var(--display);font-weight:700;font-size:15.5pt;letter-spacing:.2em;line-height:1}
+.kicker{font-size:6.8pt;color:var(--mute);letter-spacing:.03em;margin-top:.7mm}
+.case{margin-left:auto;text-align:right}
+.case .cid{font-family:var(--display);font-weight:600;font-size:10pt;letter-spacing:.04em}
+.badge{display:flex;flex-direction:column;align-items:center;justify-content:center;border:.5mm solid var(--ink);border-radius:1.6mm;padding:1.1mm 3.4mm;min-width:27mm}
+.badge small{font-family:var(--display);font-size:5.8pt;letter-spacing:.16em;text-transform:uppercase}
+.badge strong{font-family:var(--display);font-weight:700;font-size:12pt;letter-spacing:.06em;line-height:1.05}
+h1{font-family:var(--display);font-weight:600;font-size:13pt;line-height:1.18}
+h2{font-family:var(--display);font-weight:600;font-size:8.6pt;letter-spacing:.045em;text-transform:uppercase;
+  display:flex;align-items:center;gap:1.6mm;padding-bottom:.7mm;margin-bottom:1.4mm;border-bottom:.3mm solid var(--line)}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:3.8mm;height:3.8mm;border-radius:50%;background:var(--ink);color:#fff;font-size:6.6pt;letter-spacing:0;flex:none}
+h2 .aside{margin-left:auto;font-family:"Segoe UI",sans-serif;font-size:6.4pt;letter-spacing:0;text-transform:none;color:var(--faint);font-weight:400}
+h3{font-family:var(--display);font-weight:600;font-size:7.8pt;letter-spacing:.02em;margin:0 0 .8mm}
+p{margin:0 0 1.2mm}
+ul,ol{padding-left:4mm;margin:0}
+li{margin:0 0 .7mm}
+.summary{border:.45mm solid var(--ink);border-radius:1.6mm;padding:2mm 3mm;display:grid;grid-template-columns:1fr 46mm;gap:3.5mm}
+.summary ul{padding-left:3.6mm}
+.summary li{margin-bottom:.6mm}
+.conf{border-left:.3mm solid var(--line);padding-left:3mm;font-size:7.2pt}
+.conf div{margin-bottom:1.3mm}
+.conf b{display:block;font-family:var(--display);font-size:7pt;letter-spacing:.05em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse}
+th{font-family:var(--display);font-weight:600;font-size:6.9pt;letter-spacing:.04em;text-transform:uppercase;text-align:left;
+  background:var(--ink);color:#fff;padding:1mm 1.6mm}
+td{padding:.55mm 1.6mm;border-bottom:.2mm solid #d6d6d6;vertical-align:top}
+.tl td:first-child{white-space:nowrap;font-weight:600;width:24mm}
+.tl td:last-child{font-family:var(--mono);font-size:6.5pt;color:var(--mute);width:47mm}
+.tl tr.phase td{background:var(--pale);font-family:var(--display);font-weight:600;font-size:6.9pt;letter-spacing:.05em;text-transform:uppercase;padding:.7mm 1.6mm;color:var(--ink)}
+.tl tr.crit td{border-top:.4mm solid var(--ink);border-bottom:.4mm solid var(--ink);font-weight:600}
+.tl tr.crit td:last-child{font-weight:400}
+.note{font-size:6.6pt;color:var(--faint)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.alt td:first-child{font-weight:600;width:43mm}
+.alt td:last-child{width:31mm}
+.v{font-family:var(--display);font-weight:700;letter-spacing:.02em}
+.box{border:.3mm solid var(--line);border-radius:1.4mm;padding:2mm 2.6mm}
+.box.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.box.dark h3{color:#fff}
+.box.dark li{color:#fff}
+.box.dark code{color:#fff}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:6.4pt;color:var(--faint);border-top:.3mm solid var(--line);padding-top:1.3mm}
+</style>
+</head>
+<body>
+
+<!-- ============================== PAGE 1 ============================== -->
+<section class="page">
+  <header class="hdr">
+    <div class="brand">
+      <svg class="logo" viewBox="4.5 4.5 15 15" aria-hidden="true"><path d="M12 12a1 1 0 0 1 2 0a2 2 0 0 1-4 0a3 3 0 0 1 6 0a4 4 0 0 1-8 0a5 5 0 0 1 10 0a6 6 0 0 1-12 0" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg>
+      <div><div class="team">VORTEX</div><div class="kicker">CRIMEATHON’26 · Tier 3 · Technical report</div></div>
+    </div>
+    <div class="case">
+      <div class="cid">Case CR-26-047 · Harbor &amp; Finch Freight</div>
+      <div class="kicker">E01–E20 · times UTC unless marked · IDs are exact records</div>
+    </div>
+    <div class="badge"><small>Approach</small><strong>DEFENSE</strong></div>
+  </header>
+
+  <h1>A trusted vendor’s keys were used to steal our data and change where we pay a supplier, five days before a payment run</h1>
+
+  <div class="summary">
+    <ul>
+      <li><b>Who acted.</b> Between <b>9 Aug and 6 Sep 2026</b> a second actor used TallyBridge Connect’s integration credentials (<code>key-tb-07</code> on LedgerOne, <code>tb-sync-svc</code> on HelpDeskr) alongside the genuine nightly sync. It worked first from home‑broadband addresses (198.18.7.x), then from the vendor’s build server <b>tb-build-02 (10.20.4.77), inside our private link</b>.</li>
+      <li><b>What it took.</b> It searched support tickets for secrets and took a customer storage key (<code>bvk-7f3a</code>) that had been pasted into ticket TKT‑48213. With that key it read our finance and HR folders. It also exported the vendor list (9,840 records), payments (4,210) and 10 ticket exports, deleting the export jobs afterwards.</li>
+      <li><b>The fraud.</b> On <b>3 Sep</b> it changed vendor <b>V‑0412’s bank account (****4417 → ****9083) through the API with no approval</b>, before the 8 Sep run. Nothing in the records shows a past run paid to a changed account.</li>
+      <li><b>The vendor’s account.</b> TallyBridge’s notices (E12, E16) are contradicted by our logs on all six testable claims.</li>
+    </ul>
+    <div class="conf">
+      <div><b>High confidence</b>What happened, when, from where, with which credentials, and the V‑0412 change.</div>
+      <div><b>Medium</b>Who: an outsider who compromised the vendor, or a vendor insider (§5).</div>
+      <div><b>Unknown</b>Whether any money left. The bank’s payment files for 23 Aug and 8 Sep would settle it.</div>
+    </div>
+  </div>
+
+  <div>
+    <h2><span class="n">1</span>How we investigated</h2>
+    <p>We read all 20 evidence items and built a first timeline by hand. We then wrote each hypothesis as a check in our engine, <b>Double‑Entry Defense</b>, and ran it over every record (109,428 log rows), so no conclusion rests on a sample: each API call must also appear in the network log (<b>witness</b>); each read of our data must be matched by the sync write it serves (<b>ledger</b>); the sync’s normal requests are learned and departures flagged (<b>grammar</b>); each bank change needs a human approval (<b>payment firewall</b>). Times were converted to UTC. HelpDeskr (E02) and the chat (E13) log in IST. BlueVault (E05) has an unsynchronised clock whose offset we could not measure, so its times are shown uncorrected. Facts from PDFs were typed into <code>context.json</code> with their source. The engine reproduces our manual findings: 181 of 181 attacker records with no false alarms, as one incident. The full scoring is in the proof pack.</p>
+  </div>
+
+  <div>
+    <h2><span class="n">2</span>Reconstructed timeline<span class="aside">* BlueVault clock uncorrected (±minutes); event order unaffected</span></h2>
+    <table class="tl">
+      <tr><th>When (UTC)</th><th>What happened</th><th>Evidence</th></tr>
+      <tr class="phase"><td colspan="3">Before the attack: the weaknesses that were used</td></tr>
+      <tr><td>25 Jun</td><td>Support staff note that a customer’s storage key <code>bvk-7f3a</code> is pasted in ticket TKT‑48213. The key is not rotated.</td><td>E13 (11:31 IST)</td></tr>
+      <tr><td>30 Jun</td><td>Rohan Menon (accounts payable) leaves. His account stays active.</td><td>E14</td></tr>
+      <tr><td>9 Jul</td><td>Vendor host tb‑build‑02 (10.20.4.77) appears on the private link, reaching only LedgerOne‑sandbox.</td><td>E15</td></tr>
+      <tr><td>10 Jul</td><td>The genuine sync moves to client 3.5.0, and version 3.4.x is retired.</td><td>E20‑C, E01</td></tr>
+      <tr class="phase"><td colspan="3">Phase 1: stolen keys used from outside the link</td></tr>
+      <tr><td>9 Aug 03:12–03:44</td><td>8 probing calls with <code>key-tb-07</code> from 198.18.7.41, claiming to be the retired client 3.4.1.</td><td>E01 req-c28d87e49d</td></tr>
+      <tr><td>11 Aug 17:42–17:58</td><td>17 ticket searches (“password”, “api_key”, “bvk‑”) and a read of TKT‑48213 by <code>tb-sync-svc</code>.</td><td>E02 evt-20d941e9bc</td></tr>
+      <tr><td>11 Aug 18:00–19:03</td><td>10 bulk exports (EXP‑5410–5419) created, downloaded and deleted. One delete fails.</td><td>E02 evt-3fe76f60c4</td></tr>
+      <tr><td>12 Aug 03:41–04:02</td><td>Vendor-list exports of 9,840 and 9,835 records. Export 9932 is never deleted.</td><td>E01 req-c35c2ccaff, req-51b30fba51</td></tr>
+      <tr><td>13 Aug 09:02</td><td>Leaver <code>r.menon</code> signs in from the office on his old device (MFA not enrolled).</td><td>E03 sso-bb8ab61e08</td></tr>
+      <tr><td>14–16 Aug*</td><td>The stolen key <code>bvk-7f3a</code> lists /finance and reads <i>vendor-bank-details-2026.xlsx</i>. In total, 44 reads of folders the key had never used (85 MB, /finance and /hr) from 198.18.7.23, .24 and .77.</td><td>E05 bv-80ffa5124a, bv-edb0081dad</td></tr>
+      <tr><td>15 Aug 16:20–16:24</td><td>Three sign-ins as IT administrator a.kapoor from 198.18.7.77 (Mumbai). The third passes the password and fails only at MFA.</td><td>E03 sso-562f41d2b5</td></tr>
+      <tr class="phase"><td colspan="3">Phase 2: from a vendor host inside the private link</td></tr>
+      <tr><td>16 Aug</td><td>The vendor’s public records show tb‑build‑02 “re‑provisioned”.</td><td>E20‑B</td></tr>
+      <tr><td>17 Aug 12:10</td><td>tb‑build‑02 reaches <b>production</b> LedgerOne for the first time.</td><td>E15 flw-67f0a99b5c</td></tr>
+      <tr><td>17–19 Aug</td><td>56 calls from 10.20.4.77, including a payments export (4,210 records), followed by deleting export 9955.</td><td>E01 req-fe4bd4fe93, req-ab03db20b8</td></tr>
+      <tr><td>18 Aug 12:20–12:28</td><td>5 ticket searches from 10.20.4.77.</td><td>E02, E15</td></tr>
+      <tr><td>21 Aug 14:02</td><td>Vendor notice: “precautionary … no action required”. It goes to the billing contact only.</td><td>E12 (19:32 IST)</td></tr>
+      <tr><td>24 Aug 08:35</td><td>HelpDeskr bills 13 exports against an allowance of 5. Finance asks IT for “a line for the accrual”.</td><td>E06 (14:05 IST)</td></tr>
+      <tr><td>28 Aug 12:40</td><td>Vendor follow-up: “11 and 12 August only … metadata only … rotated 24 August … matter closed”.</td><td>E16 (18:10 IST)</td></tr>
+      <tr><td>1 Sep →</td><td>The announced contact sync starts. Software rewrites 70 vendor contact records (66 vendors), never reviewed. This breaks call-back checks.</td><td>E19, E16 §7</td></tr>
+      <tr class="crit"><td>3 Sep 01:41</td><td>PATCH <code>/v2/vendors/V-0412/bank-details</code> from 10.20.4.77 with <code>key-tb-07</code>, after 57 bank and payment lookups. V‑0412 Coastal Packaging changes from ****4417 to ****9083, with the approval field blank.</td><td>E18 req-5f61b0de8 → E19 chg-8b9888c39b</td></tr>
+      <tr><td>6 Sep 01:36</td><td>Reads the scheduled payments.</td><td>E18 req-bb819dfe0c</td></tr>
+      <tr class="crit"><td>8 Sep 10:00 IST</td><td>Next payment run. <b>V‑0412 must be held.</b></td><td>Case §2</td></tr>
+    </table>
+  </div>
+
+  <div class="foot"><span>Team Vortex · Double‑Entry Defense · github.com/kanishk2707/crimeathon</span><span>1 / 2</span></div>
+</section>
+
+<!-- ============================== PAGE 2 ============================== -->
+<section class="page">
+  <div>
+    <h2><span class="n">3</span>Assumptions<span class="aside">each one is a fact from the case file, or is stated and testable</span></h2>
+    <div class="cols">
+      <ol>
+        <li><b>Networks and dates.</b> The private link is 10.20.4.0/24 and the office is 172.16.0.0/16 (case §3). Payment runs are on the 8th and 23rd at 10:00 IST (§2).</li>
+        <li><b>Clocks.</b> E02 and E13 are in IST; everything else is in UTC except E05 (epoch, unsynchronised). E05 is shown uncorrected because no events happen on both systems from one address, so the offset can’t be measured. Events are days apart, so their order holds.</li>
+        <li><b>The genuine sync.</b> It runs on hosts 10.20.4.11–.16, nightly between 01:00 and 02:45, as client 3.5.0. This was <i>learned from the data</i> and corroborated by E15 host labels and E20‑C.</li>
+        <li><b>Approvals.</b> An integration has no business editing payment instructions. A bank change needs a human approval (E10, Appendix B).</li>
+      </ol>
+      <ol start="5">
+        <li><b>Attribution.</b> We attribute by credential and behaviour, not IP address. 198.18.7.0/24 is a dynamic residential range (E20‑G), and staff use it on other days.</li>
+        <li><b>Documents.</b> Documents are accurate records of what they state. Facts from E06, E13, E16 and E20 are typed into <code>context.json</code>, each with its source.</li>
+        <li><b>Labels.</b> Our labels (<code>analysis/analyst_labels.json</code>) are our judgement, not organiser ground truth. The engine’s scores are measured against them.</li>
+        <li><b>Payment files.</b> No bank payment file was supplied, so whether money left can’t be shown either way.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div>
+    <h2><span class="n">4</span>Other explanations considered</h2>
+    <table class="alt">
+      <tr><th>Explanation</th><th>What we tested</th><th>Verdict</th></tr>
+      <tr><td>Genuine TallyBridge activity or authorised maintenance</td><td>Release notes (E20‑C, E16 §7) announce only the contact sync. Payments exports, bank-detail reads and changes, and ticket searches for secrets appear in no release. A build host has no reason to reach production. The client name 3.4.1 had been retired a month earlier.</td><td><span class="v">Ruled out</span></td></tr>
+      <tr><td>The vendor’s own account: outsider, 11–12 Aug only, nothing on the link</td><td>Activity runs from 9 Aug to 6 Sep. 10.20.4.77 is inside the link. Finance files were read. <code>key-tb-07</code> was used on 3 Sep, after the claimed 24 Aug rotation. Each claim was machine-checked.</td><td><span class="v">Ruled out</span> · 6 of 6 claims contradicted</td></tr>
+      <tr><td>Insider: Rohan Menon (left 30 Jun)</td><td>One office sign-in on 13 Aug on his old device. After that, no API, ticket, storage or vendor activity by him anywhere.</td><td><span class="v">Not the actor</span> · leaver-access failure (E11 finding 3)</td></tr>
+      <tr><td>IT administrator a.kapoor acted</td><td>The attempts came from a residential Mumbai address. MFA failed and no session was opened. All 65 of her other sign-ins are from Chennai.</td><td><span class="v">Ruled out</span> · password exposed: reset</td></tr>
+      <tr><td>Farah Dsouza and V‑0233 (APR‑1182)</td><td>The reference is out of sequence (numbers had reached APR‑1237), 3 days before a run. Otherwise the change is normal: her usual device and office address, a daytime UI change.</td><td><span class="v">Unproven</span> · VERIFY the approval record</td></tr>
+      <tr><td>Other unapproved staff changes (V‑0162, V‑0128, V‑0298)</td><td>Made from office addresses through the UI between Jun and Aug: a process gap, not this actor. V‑0162’s contact was rewritten by software on 5 Sep.</td><td><span class="v">Process gap</span> · VERIFY on the contract number</td></tr>
+      <tr><td>Ordinary activity mistaken for attack</td><td>Colin Lawson’s travel; Sunita Iyer’s Tuesday exports (the 28 Jul delete is explained in E13); Farah’s 22 Jul audit export (announced in E13); the 31 Jul bulk import (BULK‑0731); nightly 429 retries; staff on 198.18.7.x. Each matches a documented routine.</td><td><span class="v">Set aside</span> · 0 alerts on 2,307 such records</td></tr>
+    </table>
+  </div>
+
+  <div>
+    <h2><span class="n">5</span>Conclusions</h2>
+    <div class="cols">
+      <div>
+        <h3>What happened</h3>
+        <p>The vendor’s integration credentials were long-lived, could write to every module and had no IP restriction (E04). Someone holding them ran a <b>four-week campaign</b>: reconnaissance, theft of secrets from tickets, a pivot into storage with a customer’s key, bulk exports with deletion, and finally a <b>payee bank change made by software with no approval</b>. They worked from the vendor’s own build host inside the private link, where traffic is trusted by default.</p>
+        <h3>Who, and how sure</h3>
+        <p>The actor held TallyBridge’s credentials and could operate tb‑build‑02 after its 16 Aug re‑provisioning. That points to either a <b>vendor insider</b> or an outsider who <b>compromised the vendor’s build or credential systems</b>. E07 notes the vendor’s SOC 2 report excludes its source code and credential vault. We can’t tell which without the vendor’s logs, and E08 §9.1 gives us no right to audit them.</p>
+        <h3>Impact</h3>
+        <p>Data taken: the vendor master, payments, ticket exports, and the bank-details and HR files. Legal notification periods should run from <b>9 Aug</b>. Money at risk: V‑0412 on 8 Sep. Four other bank changes lack valid approval.</p>
+        <h3>Why it wasn’t caught</h3>
+        <p>No system cross-checked another. The controls existed on paper:</p>
+        <ul>
+          <li>audit findings 2–7 were still open (E11);</li>
+          <li>the vendor risk was rated Low and accepted (E09 R‑031);</li>
+          <li>the vendor’s notice went to the billing contact only (E12);</li>
+          <li>the billing alert was treated as an accrual question (E06).</li>
+        </ul>
+      </div>
+      <div>
+        <div class="box dark">
+          <h3>Before the 8 Sep run</h3>
+          <ul>
+            <li><b>Hold V‑0412</b>, restore ****4417 and confirm using the phone number in the contract.</li>
+            <li><b>Verify</b> V‑0162, V‑0128, V‑0233 and V‑0298. Call the contract number, not the one on file.</li>
+            <li><b>Revoke</b> <code>key-tb-07</code>, <code>tb-sync-svc</code> and <code>bvk-7f3a</code>. Block 10.20.4.77 on the link.</li>
+            <li><b>Reset</b> a.kapoor’s password. <b>Disable</b> r.menon’s account.</li>
+            <li><b>Re‑issue</b> the sync key with least privilege: 4 actions, hosts .11–.16, 01:00–02:45 UTC. Replayed on the evidence, this would have refused 133 of 133 attacker requests.</li>
+          </ul>
+        </div>
+        <div class="box" style="margin-top:2mm">
+          <h3>Next 30 days</h3>
+          <ul>
+            <li>Keep an approval register and take call-back numbers from contracts, not from the vendor record.</li>
+            <li>Hold any bank change made by software until a person approves it.</li>
+            <li>Request TallyBridge’s build and credential-vault logs. Renegotiate audit rights (E08 §9.1).</li>
+            <li>Run Double‑Entry Defense on every log export. It takes about 8 s per run.</li>
+          </ul>
+        </div>
+        <div class="box" style="margin-top:2mm">
+          <h3>What would change our mind</h3>
+          <ul>
+            <li>An approval record exists for the V‑0412 change.</li>
+            <li>Vendor logs show 10.20.4.77 was used by its staff for an authorised purpose.</li>
+            <li>The bank confirms ****9083 belongs to Coastal Packaging.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Supporting detail: proof pack (record-level evidence index), report.html, Tier 1 analysis · all data synthetic</span><span>2 / 2</span></div>
+</section>
+</body>
+</html>

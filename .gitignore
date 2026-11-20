@@ -11,3 +11,6 @@ synthetic/
 # Office lock/temp files
 ~$*
 *.tmp
+# build scratch for the Tier 3 documents and video
+docs/tier3/build/*.png
+docs/tier3/demo/_work/

@@ -24,7 +24,7 @@ python -m venv .venv
 .venv\Scripts\activate            # Linux/macOS: source .venv/bin/activate
 pip install -r requirements.txt
 
-# 2. put the supplied E01-E20 files in evidence/ (context.json is already there)
+# 2. the supplied E01-E20 files and context.json are already in evidence/
 
 # 3. analyse the supplied evidence and score it against our labels
 python -m doubleentry analyze evidence --out out/real --truth analysis/analyst_labels.json
@@ -39,7 +39,7 @@ python -m doubleentry evaluate --out eval --variants all --seeds 7,11,23
 python analysis/build_proof_pack.py evidence docs/tier3
 ```
 
-**Expected result of step 3** (this run took 25.8 s for 109,428 normalised rows): the console prints the score block, then `50 alerts in 1 thread(s); 1 vendor(s) to hold.` `out/real/` then contains:
+**Expected result of step 3** (this run took 30.2 s for 109,428 normalised rows): the console prints the score block, then `50 alerts in 1 thread(s); 1 vendor(s) to hold.` `out/real/` then contains:
 
 | File | What it holds |
 |---|---|
@@ -106,7 +106,7 @@ Scored against `analysis/analyst_labels.json` (our labels; see section 6). The o
 | Incident threads | 1 | n/a |
 | Leaver account found | 1/1 | 0/1 |
 | First alert | 2026-08-09 03:12:00 UTC | - |
-| Run time | 25.8 s | - |
+| Run time | 30.2 s on this machine (laptop; measured 7.7 s on mains power, ~30 s on battery) | - |
 
 ### Attack stages, in time order
 

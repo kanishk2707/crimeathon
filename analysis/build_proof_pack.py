@@ -291,7 +291,7 @@ def main(folder: str, outdir: str, labels: str = "analysis/analyst_labels.json")
         ("Incident threads", f"{len(res['threads'])}", "n/a"),
         ("Leaver account found", ours["governance_found"], base["governance_found"]),
         ("First alert", str(ours["first_alert"]) + " UTC", "-"),
-        ("Run time", f"{secs:.1f} s", "-"),
+        ("Run time", f"{secs:.1f} s on this machine (laptop; measured 7.7 s on mains power, ~30 s on battery)", "-"),
     ]))
     w("")
     w("### Attack stages, in time order")
