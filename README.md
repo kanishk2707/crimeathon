@@ -22,7 +22,7 @@ The obvious per-log approach, measured on the same evidence, raises 29,961 false
 | 1 | One-page final project PPT | [`docs/tier3/Vortex_CR-26-047_Final_OnePager.pptx`](docs/tier3/) (+ `.pdf`) |
 | 2 | Working solution | this repository: `python -m doubleentry ...` (see [Run it](#run-it-step-by-step)) |
 | 3 | Source and README | this file |
-| 4 | Demo video | [`docs/tier3/demo/`](docs/tier3/demo/) (video and narration script) |
+| 4 | Demo video | [`docs/tier3/demo/Vortex_CR-26-047_Demo.mp4`](docs/tier3/demo/Vortex_CR-26-047_Demo.mp4): 3 min 38 s, 1080p, narrated; [script and shot list](docs/tier3/demo/DEMO_SCRIPT.md) |
 | 5 | Proof pack | [`docs/tier3/PROOF_PACK.md`](docs/tier3/PROOF_PACK.md) (+ `.pdf`, `evidence_index.csv`, `input_manifest.csv`) |
 | 6 | Final technical report | [`docs/tier3/Vortex_CR-26-047_Technical_Report.pdf`](docs/tier3/) |
 
@@ -66,6 +66,8 @@ Earlier rounds: [Tier 1 case analysis](docs/Vortex_CR-26-047_Tier1_Case_Analysis
 - Python 3.10 or newer (tested on 3.13.7, Windows 11);
 - `pandas>=2.0` and `numpy>=1.24`;
 - no network access, GPU, database or API keys.
+
+**Verified from a fresh clone:** a clean virtual environment (pandas 3.1.1, numpy 2.5.5) gives the same results as development (pandas 2.3.2, numpy 2.4.2). Every evidence file's SHA-256 matches `docs/tier3/input_manifest.csv`.
 
 ```powershell
 git clone https://github.com/kanishk2707/crimeathon.git

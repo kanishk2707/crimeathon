@@ -111,7 +111,7 @@ def run_engine():
 
 
 def terminal_html(stdout: str, secs: float) -> str:
-    keep = re.compile(r'^\s*("ours"|"baseline"|"malicious"|"tp"|"fp"|"fn"|"precision"|"recall"|"stages_detected")|^\s*[{}]\s*,?$|^\{|^\}')
+    keep = re.compile(r'^\s*("ours"|"baseline"|"tp"|"fp"|"fn"|"stages_detected")|^ ?[{}],?$')
     lines, skipped = [], False
     body = stdout.strip().splitlines()
     for ln in body[:-1]:
@@ -150,35 +150,68 @@ def title_html() -> str:
 
 
 # ----------------------------------------------------------------------------- 2. screenshots
-def screenshots(term: str):
+VIEW_CSS = (H - CAP_H) / DSF        # page height visible above the caption bar, in CSS px
+TOP_PAD = 28                        # CSS px kept above a section heading
+SPEED = 120                         # maximum scroll speed, CSS px per second
+
+
+def region(sc, marks, total, dur):
+    """Scroll range (CSS px) for a scene on a long page: from its heading to where the section ends."""
+    tag, key = sc["sel"]
+    heads = sorted(marks, key=lambda m: m["y"])
+    if tag == "top":
+        start, nxt = 0.0, next((m["y"] for m in heads if m["y"] > 60), total)
+    else:
+        m = next(m for m in heads if m["tag"] == tag and (m["t"].startswith(key) if tag == "h2" else key in m["t"]))
+        start = max(m["y"] - TOP_PAD, 0.0)
+        pool = [x for x in heads if x["tag"] == "h2"] if tag == "h2" else heads
+        nxt = next((x["y"] for x in pool if x["y"] > m["y"] + 20), total)
+    end = min(max(nxt - VIEW_CSS + 10, start), start + SPEED * dur, max(total - 720, start))
+    return start, end
+
+
+def screenshots(term: str, durs):
+    """One image per scene. Long pages are clipped per scene: Chromium cannot capture more than 16,384 px in one shot."""
     from playwright.sync_api import sync_playwright
     WORK.mkdir(parents=True, exist_ok=True)
     (WORK / "terminal.html").write_text(term, encoding="utf-8")
     (WORK / "title.html").write_text(title_html(), encoding="utf-8")
-    marks = {}
+    shots = {}
     with sync_playwright() as p:
         b = p.chromium.launch(channel="msedge", headless=True)
         ctx = b.new_context(viewport={"width": 1280, "height": 720}, device_scale_factor=DSF, color_scheme="light")
         pg = ctx.new_page()
-        for name, path in [("title", WORK / "title.html"), ("terminal", WORK / "terminal.html"),
-                           ("report", ROOT / "out" / "real" / "report.html"), ("eval", ROOT / "eval" / "evaluation.html")]:
+        pg.goto((WORK / "title.html").as_uri()); pg.wait_for_timeout(300)
+        pg.screenshot(path=str(WORK / "title.png"))
+        pg.goto((WORK / "terminal.html").as_uri()); pg.wait_for_timeout(300)
+        pg.screenshot(path=str(WORK / "terminal.png"), full_page=True)
+        for name, path in [("report", ROOT / "out" / "real" / "report.html"), ("eval", ROOT / "eval" / "evaluation.html")]:
             pg.goto(path.as_uri()); pg.wait_for_timeout(400)
-            pg.screenshot(path=str(WORK / f"{name}.png"), full_page=name != "title")
-            marks[name] = pg.evaluate("() => [...document.querySelectorAll('h2,h3')].map(h => ({tag: h.tagName.toLowerCase(), "
-                                      "t: h.textContent.replace(/\\s+/g,' ').trim(), y: h.getBoundingClientRect().top + window.scrollY}))")
+            marks = pg.evaluate("() => [...document.querySelectorAll('h2,h3')].map(h => ({tag: h.tagName.toLowerCase(), "
+                                "t: h.textContent.replace(/\\s+/g,' ').trim(), y: h.getBoundingClientRect().top + window.scrollY}))")
+            total = pg.evaluate("() => document.documentElement.scrollHeight")
+            for i, sc in enumerate(SCENES):
+                if sc["src"] != name:
+                    continue
+                start, end = region(sc, marks, total, durs[i])
+                hgt = min(end - start + 720, total - start)
+                shots[i] = WORK / f"scene_{i:02d}.png"
+                pg.screenshot(path=str(shots[i]), full_page=True, clip={"x": 0, "y": start, "width": 1280, "height": hgt})
         b.close()
     # slides from the Tier 2 deck and the Tier 3 one-pager, exported by PowerPoint
     for deck, prefix in [(T2, "t2_"), (ONEPAGER, "op_")]:
         subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(EXPORT_PPT), str(deck),
                         str(WORK / f"{prefix}deck.pdf"), str(WORK / prefix)], check=True, capture_output=True)
-    return marks
+    for i, sc in enumerate(SCENES):
+        shots.setdefault(i, WORK / f"{sc['src'] if sc['src'] in ('title', 'terminal') else sc['src']}.png")
+    return shots
 
 
 # ----------------------------------------------------------------------------- 3. narration
 def narrate(scenes):
     ps = ["Add-Type -AssemblyName System.Speech",
           "$s = New-Object System.Speech.Synthesis.SpeechSynthesizer",
-          "try { $s.SelectVoice('Microsoft Zira Desktop') } catch {}", "$s.Rate = 0",
+          "try { $s.SelectVoice('Microsoft Zira Desktop') } catch {}", "$s.Rate = 1",
           "$fmt = New-Object System.Speech.AudioFormat.SpeechAudioFormatInfo(44100, [System.Speech.AudioFormat.AudioBitsPerSample]::Sixteen, [System.Speech.AudioFormat.AudioChannel]::Mono)"]
     for i, sc in enumerate(scenes):
         txt = WORK / f"say_{i:02d}.txt"
@@ -211,10 +244,11 @@ def overlay(label: str, caption: str) -> Image.Image:
     for ln in lines[:2]:
         d.text((56, y), ln, font=F_CAP, fill=(255, 255, 255, 255)); y += 42
     d.text((W - 56, H - CAP_H / 2), "VORTEX", font=F_MARK, fill=(150, 150, 150, 255), anchor="rm")
-    if label:
+    if label:                                            # chip top-right, clear of left-aligned headings
         tw = d.textlength(label.upper(), font=F_LABEL)
-        d.rounded_rectangle([40, 34, 40 + tw + 44, 34 + 50], radius=10, fill=(17, 17, 17, 235))
-        d.text((62, 59), label.upper(), font=F_LABEL, fill=(255, 255, 255, 255), anchor="lm")
+        x1 = W - 40
+        d.rounded_rectangle([x1 - tw - 44, 30, x1, 30 + 50], radius=10, fill=(17, 17, 17, 235))
+        d.text((x1 - 22, 55), label.upper(), font=F_LABEL, fill=(255, 255, 255, 255), anchor="rm")
     return o
 
 
@@ -222,7 +256,7 @@ def ease(t):
     return 0.5 - 0.5 * np.cos(np.pi * min(max(t, 0.0), 1.0))
 
 
-def scene_frames(sc, img: Image.Image, marks, dur):
+def scene_frames(sc, img: Image.Image, dur):
     n = int(round(dur * FPS))
     ov = overlay(sc["label"], sc["caption"])
     if img.height <= H + 4:
@@ -234,38 +268,24 @@ def scene_frames(sc, img: Image.Image, marks, dur):
             f = base.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((W, H), Image.BILINEAR).convert("RGBA")
             yield Image.alpha_composite(f, ov).convert("RGB")
         return
-    tag, key = sc.get("sel") or ("top", None)
-    ys = sorted(m["y"] * DSF for m in marks)
-    if tag == "top":
-        start = 0.0
-        nxt = next((m["y"] * DSF for m in marks if m["tag"] == "h2"), img.height) if sc.get("sel") else img.height
-    else:
-        m = next(m for m in marks if m["tag"] == tag and (m["t"].startswith(key) if tag == "h2" else key in m["t"]))
-        start = max(m["y"] * DSF - 34, 0)
-        nxt = next((y for y in ys if y > m["y"] * DSF + 40), img.height)
-    view = H - CAP_H + 10
-    end = min(max(start, nxt - view + 30), img.height - H, start + 140 * DSF * dur)   # no faster than ~140 css px/s
-    end = max(end, start)
+    end = img.height - H                                  # each long-page image is clipped to exactly this scene's scroll
     for k in range(n):
         t = k / max(n - 1, 1)
-        y = start + (end - start) * ease((t - 0.12) / 0.76)
+        y = end * ease((t - 0.12) / 0.76)
         f = img.crop((0, int(y), W, int(y) + H)).convert("RGBA")
         yield Image.alpha_composite(f, ov).convert("RGB")
 
 
 def main():
     stdout, secs = run_engine()
-    marks = screenshots(terminal_html(stdout, secs))
+    WORK.mkdir(parents=True, exist_ok=True)
     clips, sr = narrate(SCENES)
-    imgs = {}
-    for name in ["title", "terminal", "report", "eval"]:
-        im = Image.open(WORK / f"{name}.png")
-        imgs[name] = im.convert("RGB") if im.width == W else im.convert("RGB").resize((W, int(im.height * W / im.width)))
-    imgs["t2_2"] = Image.open(WORK / "t2_2.png").convert("RGB")
-    imgs["t2_5"] = Image.open(WORK / "t2_5.png").convert("RGB")
-    imgs["op_1"] = Image.open(WORK / "op_1.png").convert("RGB")
-
     durs = [max(5.0, len(c) / sr + 1.3) for c in clips]
+    shots = screenshots(terminal_html(stdout, secs), durs)
+    imgs = {}
+    for i, path in shots.items():
+        im = Image.open(path).convert("RGB")
+        imgs[i] = im if im.width == W else im.resize((W, int(im.height * W / im.width)))
     total = sum(durs)
     audio = np.zeros(int((total + 1) * sr), dtype=np.int16)
     t = 0.0
@@ -282,8 +302,7 @@ def main():
                            "-c:a", "aac", "-b:a", "128k", "-shortest", str(mp4)], stdin=subprocess.PIPE)
     prev, nf = None, int(FADE * FPS)
     for i, (sc, d) in enumerate(zip(SCENES, durs)):
-        src = sc["src"]
-        for k, fr in enumerate(scene_frames(sc, imgs[src], marks.get(src, []), d)):
+        for k, fr in enumerate(scene_frames(sc, imgs[i], d)):
             if prev is not None and k < nf:
                 fr = Image.blend(prev, fr, (k + 1) / (nf + 1))
             ff.stdin.write(fr.tobytes())
