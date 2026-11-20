@@ -14,3 +14,4 @@ synthetic/
 # build scratch for the Tier 3 documents and video
 docs/tier3/build/*.png
 docs/tier3/demo/_work/
+docs/tier3/build/mids.txt
